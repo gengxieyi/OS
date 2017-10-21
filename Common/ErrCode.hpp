@@ -1,0 +1,20 @@
+#ifndef ERRCODE_HPP_
+#define ERRCODE_HPP_
+#include <string>
+enum ErrCode {
+    SUCCESS = 0,
+    INDEX_ALREADY_EXIST = 1,
+    INDEX_FULL,
+    FLUSH_FAILED,
+    INDEX_NOT_EXIST,
+    OPEN_FILE_FAILED,
+    FILE_DATA_BROKEN,
+    WRITE_INDEX_FILE_FAILED,
+    READ_INDEX_FILE_FAILED,
+    WRITE_UNIT_FILE_FAILED,
+    READ_UNIT_FILE_FAILED,
+    LIST_INDEX_ERROR,
+};
+
+std::string ToString (int err);
+#endif
