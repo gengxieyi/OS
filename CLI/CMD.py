@@ -3,32 +3,29 @@ import socket
 import struct
 
 class Command(object):
-    def __init__(self,op,ip,port):
-        self.op = op
+    def __init__(self,ip,port,op,key,value):
         self.ip = ip
         self.port = port
+        self.op = op
+        self.key = key
+        self.value = value
 
     def execute(self):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.connect((self.ip,int(self.port)));
-        buf = int(op)
-        st = struct.Struct('I')
-
-        s.send(st.pack(buf));
-        result = s.recv(1024);
-        print result
-
-    def output(self):
-        print self.op
-        print self.ip
-        print self.port
+        pattern = "<ii"+str(len(self.key))+"si"+str(len(self.value))+"s"
+        print pattern
+        data = struct.pack(pattern,int(self.op),len(self.key),self.key,len(self.value),self.value);
+        s.send(data);
 
 if __name__ == "__main__":
-    if len(sys.argv) < 4:
+    if len(sys.argv) < 6:
         print "error"
     else :
-        op = sys.argv[1]
-        ip = sys.argv[2]
-        port = sys.argv[3]
-        command = Command(op,ip,port)
+        ip = sys.argv[1]
+        port = sys.argv[2]
+        op = sys.argv[3]
+        key = sys.argv[4]
+        value = sys.argv[5]
+        command = Command(ip,port,op,key,value)
         command.execute()

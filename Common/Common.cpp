@@ -11,6 +11,7 @@
 #include <arpa/inet.h>
 #include <iostream>
 #include <string>
+#include "Request.hpp"
 
 int SocketCreate(int port) 
 {
@@ -75,26 +76,41 @@ Connection* SocketAccept(int st)
     return conn;
 }
 
-int ReadOp(int st,int* op)
+int ReadRequest(int st,Request*& req)
 {
-    int ret = recv(st,op,sizeof(int),MSG_DONTWAIT);
+    char buf[1024];
+    int ret = recv(st,buf,1024,MSG_DONTWAIT);
+    if (ret > 0) {
+        for (int i = 0;i < ret;i++) {
+            printf("%d\n",buf[i]);
+        }
+        ParseToRequest(buf,req);
+    }
     return ret;
 }
 
-std::string ParseOpCode(int op)
+void ParseToRequest(char* buf,Request*& req)
 {
-    switch (op) {
+    req = new Request;
+    int* op = (int*) buf;
+    buf += 4;
+    int* keysize = (int*)buf;
+    buf += 4;
+    req->mKey = std::string(buf,*keysize);
+    buf += *keysize;
+    int* valuesize= NULL;
+    switch (*op) {
         case ePut :
-            return "Put";
-        case eGet : 
-            return "Get";
+            valuesize = (int*) buf;
+            buf += 4;
+            req->mValue = std::string(buf,*valuesize);
+            buf += *valuesize;
+            break;
+        case eGet :
+            break;
         case eDelete :
-            return "Delete";
-        case ePing :
-            return "Ping";
-        case eAdd :
-            return "Add";
-        default:
-            return "unknown";
+            break;
+        default :
+            break;
     }
 }

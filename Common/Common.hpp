@@ -1,21 +1,13 @@
 #ifndef COMMON_HPP_
 #define COMMON_HPP_
 #include <string>
+class Request;
 class Connection;
-enum OpType {
-    ePut = 1,
-    eGet,
-    eDelete,
-
-    ePing = 11,
-    
-    eAdd = 21,
-};
 
 int SocketCreate(int port);
 Connection* SocketAccept(int st);
-int ReadOp(int st,int* op);
+int ReadRequest(int st,Request*& req);
 
-std::string ParseOpCode(int op);
+void ParseToRequest(char* buf,Request*& req);
 
 #endif

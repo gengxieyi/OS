@@ -1,20 +1,19 @@
 #ifndef REQUEST_HPP_
 #define REQUEST_HPP_
+#include <string>
 
 enum OpType {
     ePut = 1,
     eGet,
     eDelete,
-}
+};
 struct Request {
-    int fd
+    int mFD;
     int mOpType;
-    char* mKey;
-    int mKeySize;
-    char* mValue;
-    int mValueSize;
+    std::string mKey;
+    std::string mValue;
     int mErrCode;
     std::string mErrStr;     
-}
+};
 
 #endif

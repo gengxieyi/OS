@@ -1,6 +1,7 @@
 #include "ConnectionWorker.hpp"
 #include "../Common/Connection.hpp"
 #include "../Common/Common.hpp"
+#include "../Common/Request.hpp"
 
 ConnWorker::ConnWorker() {
     mFD = SocketCreate(LISTEN_PORT);
@@ -26,7 +27,8 @@ void* ConnWorker::Entry() {
                 iter++;
             } else {
                 int op = 0;
-                gxy_int32_t ret = ReadOp(iter->first,&op);
+                Request* req = NULL;
+                gxy_int32_t ret = ReadRequest(iter->first,req);
                 if (ret == 0) {
                     std::cout << "close " << iter->first << std::endl;
                     close(iter->first);
@@ -36,8 +38,9 @@ void* ConnWorker::Entry() {
                     std::cout << "no data : " << iter->second->GetIP() << std::endl;
                     iter++;
                 } else {
-                    std::cout << "op : " << op << std::endl;
-                    std::cout << ParseOpCode(op) << std::endl;
+                    if (req != NULL) {
+                        std::cout << req->mKey << ":" << req->mValue << std::endl;
+                    }
                     iter++;
                 }
             }
