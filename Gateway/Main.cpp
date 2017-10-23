@@ -1,8 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
-#include "Common.hpp"
-#include "Server.hpp"
-#include "Connection.hpp"
+#include "../Common/Common.hpp"
+#include "../Common/Connection.hpp"
 #include <unistd.h>
 #include <iostream>
 #define THREAD_NUM 5
@@ -25,22 +24,18 @@ int main(int argc,char *argv[])
 		return 0;
 	}
     std::cout << "http server start successfully" << std::endl;
-    Server server(THREAD_NUM);
-    server.Start();
     while(1) {
-	    int client_st = SocketAccept(st);
-	    close(client_st);
-        if (client_st == 0) {
+	    Connection* conn = SocketAccept(st);
+        if (conn == NULL) {
             std::cout << "get a client failed" << std::endl; 
             break;
         } else {
-            std::cout << "get a client" << std::endl; 
+            std::cout << conn->GetIP() << std::endl; 
+            std::cout << conn->GetPort() << std::endl; 
+            conn->Read();
+            close(conn->GetFD());
+            delete conn;
         }
-
-
-        Connection* conn = new Connection(client_st);
-        OpCtx* ctx = new OpCtx(conn);
-        server.ProcessRequest(ctx);
     }
 
 

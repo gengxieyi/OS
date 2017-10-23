@@ -4,13 +4,13 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/root/OS/Gateway/Common.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Common.cpp.o"
-  "/root/OS/Gateway/Connection.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Connection.cpp.o"
   "/root/OS/Gateway/Main.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Main.cpp.o"
-  "/root/OS/Gateway/OpCtx.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/OpCtx.cpp.o"
-  "/root/OS/Gateway/Server.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Server.cpp.o"
-  "/root/OS/Gateway/ServerManager.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/ServerManager.cpp.o"
-  "/root/OS/Gateway/Worker.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Worker.cpp.o"
+  "/root/OS/Common/Common.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Common/Common.cpp.o"
+  "/root/OS/Common/Connection.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o"
+  "/root/OS/Common/ErrCode.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o"
+  "/root/OS/Common/OpCtx.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o"
+  "/root/OS/Common/Server.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Common/Server.cpp.o"
+  "/root/OS/Common/Worker.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

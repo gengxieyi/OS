@@ -2,43 +2,46 @@
 #define CONNECTION_HPP_
 
 #include <string>
-#define BUFFER_SIZE 1024
+#include <iostream>
+#include "CommonDefine.hpp"
+#include <sys/socket.h>
+#include <unistd.h>
 
 class Connection {
     private :
-        int mClientSocket;
-        std::string mHeader;
-        int mOpType;
-        bool mContinue;
-        std::string mContent;
-        std::string mPath;
-        int mContentLength;
+        gxy_int32_t mClientSocket;
+        std::string mIP;
+        gxy_uint16_t mPort;
     public :
-        Connection(int st) : mClientSocket(st) {
-            mHeader = "";
+        Connection(int st,char* ip,unsigned short port){
+            mClientSocket = st;
+            mIP = std::string(ip);
+            mPort = port;
+        }
+        void Read() {
+            while (1) {
+            char buf[4];
+	        int rc = recv(mClientSocket, buf, sizeof(buf), MSG_DONTWAIT);
+            if (rc > 0) {
+                std::cout << std::string(buf,rc) << std::endl;
+            } else if (rc == 0) {
+                break;
+            }
+            std::cout << rc << std::endl;
+            usleep(1000000);
+            }
+        }
+
+        std::string GetIP() {
+            return mIP;
+        }
+        gxy_uint16_t GetPort() {
+            return mPort;
+        }
+        gxy_int32_t GetFD() {
+            return mClientSocket;
         }
         ~Connection();
-        std::string GetHeader();
-        int ReadHeader();
-        int ParseHeader();
-        int SendResponse(int errno,int size);
-        int SendResponse(char* buf,int len);
-        int GetOpType() {
-            return mOpType;
-        }
-        int GetLength() {
-            return mContentLength;
-        }
-        bool GetContinue() {
-            return mContinue;
-        }
-        std::string GetContent() {
-            return mContent;
-        }
-        std::string GetPath() {
-            return mPath;
-        }
-        char* GetBlock(int& len);
 
 };
 

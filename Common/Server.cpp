@@ -5,7 +5,7 @@
 
 int Server::Start() {
     for (int i = 0; i < mThreadCount; i++) {
-        Worker* worker = mWorker[i];
+        Worker* worker = mWorkerMap[i];
         worker->Start();
     }
     return 0;

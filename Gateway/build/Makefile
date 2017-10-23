@@ -114,54 +114,6 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-Common.o: Common.cpp.o
-.PHONY : Common.o
-
-# target to build an object file
-Common.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Common.cpp.o
-.PHONY : Common.cpp.o
-
-Common.i: Common.cpp.i
-.PHONY : Common.i
-
-# target to preprocess a source file
-Common.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Common.cpp.i
-.PHONY : Common.cpp.i
-
-Common.s: Common.cpp.s
-.PHONY : Common.s
-
-# target to generate assembly for a file
-Common.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Common.cpp.s
-.PHONY : Common.cpp.s
-
-Connection.o: Connection.cpp.o
-.PHONY : Connection.o
-
-# target to build an object file
-Connection.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Connection.cpp.o
-.PHONY : Connection.cpp.o
-
-Connection.i: Connection.cpp.i
-.PHONY : Connection.i
-
-# target to preprocess a source file
-Connection.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Connection.cpp.i
-.PHONY : Connection.cpp.i
-
-Connection.s: Connection.cpp.s
-.PHONY : Connection.s
-
-# target to generate assembly for a file
-Connection.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Connection.cpp.s
-.PHONY : Connection.cpp.s
-
 Main.o: Main.cpp.o
 .PHONY : Main.o
 
@@ -186,101 +138,149 @@ Main.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main.cpp.s
 .PHONY : Main.cpp.s
 
-OpCtx.o: OpCtx.cpp.o
-.PHONY : OpCtx.o
+root/OS/Common/Common.o: root/OS/Common/Common.cpp.o
+.PHONY : root/OS/Common/Common.o
 
 # target to build an object file
-OpCtx.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/OpCtx.cpp.o
-.PHONY : OpCtx.cpp.o
+root/OS/Common/Common.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/Common.cpp.o
+.PHONY : root/OS/Common/Common.cpp.o
 
-OpCtx.i: OpCtx.cpp.i
-.PHONY : OpCtx.i
+root/OS/Common/Common.i: root/OS/Common/Common.cpp.i
+.PHONY : root/OS/Common/Common.i
 
 # target to preprocess a source file
-OpCtx.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/OpCtx.cpp.i
-.PHONY : OpCtx.cpp.i
+root/OS/Common/Common.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/Common.cpp.i
+.PHONY : root/OS/Common/Common.cpp.i
 
-OpCtx.s: OpCtx.cpp.s
-.PHONY : OpCtx.s
+root/OS/Common/Common.s: root/OS/Common/Common.cpp.s
+.PHONY : root/OS/Common/Common.s
 
 # target to generate assembly for a file
-OpCtx.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/OpCtx.cpp.s
-.PHONY : OpCtx.cpp.s
+root/OS/Common/Common.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/Common.cpp.s
+.PHONY : root/OS/Common/Common.cpp.s
 
-Server.o: Server.cpp.o
-.PHONY : Server.o
+root/OS/Common/Connection.o: root/OS/Common/Connection.cpp.o
+.PHONY : root/OS/Common/Connection.o
 
 # target to build an object file
-Server.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Server.cpp.o
-.PHONY : Server.cpp.o
+root/OS/Common/Connection.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o
+.PHONY : root/OS/Common/Connection.cpp.o
 
-Server.i: Server.cpp.i
-.PHONY : Server.i
+root/OS/Common/Connection.i: root/OS/Common/Connection.cpp.i
+.PHONY : root/OS/Common/Connection.i
 
 # target to preprocess a source file
-Server.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Server.cpp.i
-.PHONY : Server.cpp.i
+root/OS/Common/Connection.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/Connection.cpp.i
+.PHONY : root/OS/Common/Connection.cpp.i
 
-Server.s: Server.cpp.s
-.PHONY : Server.s
+root/OS/Common/Connection.s: root/OS/Common/Connection.cpp.s
+.PHONY : root/OS/Common/Connection.s
 
 # target to generate assembly for a file
-Server.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Server.cpp.s
-.PHONY : Server.cpp.s
+root/OS/Common/Connection.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/Connection.cpp.s
+.PHONY : root/OS/Common/Connection.cpp.s
 
-ServerManager.o: ServerManager.cpp.o
-.PHONY : ServerManager.o
+root/OS/Common/ErrCode.o: root/OS/Common/ErrCode.cpp.o
+.PHONY : root/OS/Common/ErrCode.o
 
 # target to build an object file
-ServerManager.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ServerManager.cpp.o
-.PHONY : ServerManager.cpp.o
+root/OS/Common/ErrCode.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o
+.PHONY : root/OS/Common/ErrCode.cpp.o
 
-ServerManager.i: ServerManager.cpp.i
-.PHONY : ServerManager.i
+root/OS/Common/ErrCode.i: root/OS/Common/ErrCode.cpp.i
+.PHONY : root/OS/Common/ErrCode.i
 
 # target to preprocess a source file
-ServerManager.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ServerManager.cpp.i
-.PHONY : ServerManager.cpp.i
+root/OS/Common/ErrCode.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.i
+.PHONY : root/OS/Common/ErrCode.cpp.i
 
-ServerManager.s: ServerManager.cpp.s
-.PHONY : ServerManager.s
+root/OS/Common/ErrCode.s: root/OS/Common/ErrCode.cpp.s
+.PHONY : root/OS/Common/ErrCode.s
 
 # target to generate assembly for a file
-ServerManager.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ServerManager.cpp.s
-.PHONY : ServerManager.cpp.s
+root/OS/Common/ErrCode.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.s
+.PHONY : root/OS/Common/ErrCode.cpp.s
 
-Worker.o: Worker.cpp.o
-.PHONY : Worker.o
+root/OS/Common/OpCtx.o: root/OS/Common/OpCtx.cpp.o
+.PHONY : root/OS/Common/OpCtx.o
 
 # target to build an object file
-Worker.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Worker.cpp.o
-.PHONY : Worker.cpp.o
+root/OS/Common/OpCtx.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o
+.PHONY : root/OS/Common/OpCtx.cpp.o
 
-Worker.i: Worker.cpp.i
-.PHONY : Worker.i
+root/OS/Common/OpCtx.i: root/OS/Common/OpCtx.cpp.i
+.PHONY : root/OS/Common/OpCtx.i
 
 # target to preprocess a source file
-Worker.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Worker.cpp.i
-.PHONY : Worker.cpp.i
+root/OS/Common/OpCtx.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.i
+.PHONY : root/OS/Common/OpCtx.cpp.i
 
-Worker.s: Worker.cpp.s
-.PHONY : Worker.s
+root/OS/Common/OpCtx.s: root/OS/Common/OpCtx.cpp.s
+.PHONY : root/OS/Common/OpCtx.s
 
 # target to generate assembly for a file
-Worker.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Worker.cpp.s
-.PHONY : Worker.cpp.s
+root/OS/Common/OpCtx.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.s
+.PHONY : root/OS/Common/OpCtx.cpp.s
+
+root/OS/Common/Server.o: root/OS/Common/Server.cpp.o
+.PHONY : root/OS/Common/Server.o
+
+# target to build an object file
+root/OS/Common/Server.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/Server.cpp.o
+.PHONY : root/OS/Common/Server.cpp.o
+
+root/OS/Common/Server.i: root/OS/Common/Server.cpp.i
+.PHONY : root/OS/Common/Server.i
+
+# target to preprocess a source file
+root/OS/Common/Server.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/Server.cpp.i
+.PHONY : root/OS/Common/Server.cpp.i
+
+root/OS/Common/Server.s: root/OS/Common/Server.cpp.s
+.PHONY : root/OS/Common/Server.s
+
+# target to generate assembly for a file
+root/OS/Common/Server.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/Server.cpp.s
+.PHONY : root/OS/Common/Server.cpp.s
+
+root/OS/Common/Worker.o: root/OS/Common/Worker.cpp.o
+.PHONY : root/OS/Common/Worker.o
+
+# target to build an object file
+root/OS/Common/Worker.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o
+.PHONY : root/OS/Common/Worker.cpp.o
+
+root/OS/Common/Worker.i: root/OS/Common/Worker.cpp.i
+.PHONY : root/OS/Common/Worker.i
+
+# target to preprocess a source file
+root/OS/Common/Worker.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/Worker.cpp.i
+.PHONY : root/OS/Common/Worker.cpp.i
+
+root/OS/Common/Worker.s: root/OS/Common/Worker.cpp.s
+.PHONY : root/OS/Common/Worker.s
+
+# target to generate assembly for a file
+root/OS/Common/Worker.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/Worker.cpp.s
+.PHONY : root/OS/Common/Worker.cpp.s
 
 # Help Target
 help:
@@ -291,27 +291,27 @@ help:
 	@echo "... edit_cache"
 	@echo "... main"
 	@echo "... rebuild_cache"
-	@echo "... Common.o"
-	@echo "... Common.i"
-	@echo "... Common.s"
-	@echo "... Connection.o"
-	@echo "... Connection.i"
-	@echo "... Connection.s"
 	@echo "... Main.o"
 	@echo "... Main.i"
 	@echo "... Main.s"
-	@echo "... OpCtx.o"
-	@echo "... OpCtx.i"
-	@echo "... OpCtx.s"
-	@echo "... Server.o"
-	@echo "... Server.i"
-	@echo "... Server.s"
-	@echo "... ServerManager.o"
-	@echo "... ServerManager.i"
-	@echo "... ServerManager.s"
-	@echo "... Worker.o"
-	@echo "... Worker.i"
-	@echo "... Worker.s"
+	@echo "... root/OS/Common/Common.o"
+	@echo "... root/OS/Common/Common.i"
+	@echo "... root/OS/Common/Common.s"
+	@echo "... root/OS/Common/Connection.o"
+	@echo "... root/OS/Common/Connection.i"
+	@echo "... root/OS/Common/Connection.s"
+	@echo "... root/OS/Common/ErrCode.o"
+	@echo "... root/OS/Common/ErrCode.i"
+	@echo "... root/OS/Common/ErrCode.s"
+	@echo "... root/OS/Common/OpCtx.o"
+	@echo "... root/OS/Common/OpCtx.i"
+	@echo "... root/OS/Common/OpCtx.s"
+	@echo "... root/OS/Common/Server.o"
+	@echo "... root/OS/Common/Server.i"
+	@echo "... root/OS/Common/Server.s"
+	@echo "... root/OS/Common/Worker.o"
+	@echo "... root/OS/Common/Worker.i"
+	@echo "... root/OS/Common/Worker.s"
 .PHONY : help
 
 

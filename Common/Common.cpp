@@ -1,4 +1,5 @@
 #include "Common.hpp"
+#include "Connection.hpp"
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -8,6 +9,7 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <iostream>
+#include <string>
 
 int SocketCreate(int port) 
 {
@@ -23,6 +25,7 @@ int SocketCreate(int port)
         std::cout << "setsockopt failed : " << strerror(errno);
 		return 0;
 	}
+
 	struct sockaddr_in sockaddr;
 	memset(&sockaddr, 0, sizeof(sockaddr));
 	sockaddr.sin_port = htons(port);
@@ -43,8 +46,9 @@ int SocketCreate(int port)
 	return st;
 }
 
-int SocketAccept(int st)
+Connection* SocketAccept(int st)
 {
+    Connection* conn = NULL;
 	int client_st;
 	struct sockaddr_in client_sockaddr;
 	socklen_t len = sizeof(client_sockaddr);
@@ -56,28 +60,9 @@ int SocketAccept(int st)
 	{
 	    std::cout << "accept failture : " << strerror(errno);
 		return 0;
-	} 
-    
-    return client_st;
-}
-
-std::string GetErrorString(int err)
-{
-    std::string err_str = "";
-    switch (err) {
-        case 200 :
-            err_str = "OK";
-            break;
-        case 201 :
-            err_str = "FILE EXIST";
-            break;
-        case 202 :
-            err_str = "FILE NOT EXIST";
-            break;
-        default :
-            err_str = "UNKNOWN ERROR";
-            break;
+	} else {
+        conn = new Connection(client_st,inet_ntoa(client_sockaddr.sin_addr),client_sockaddr.sin_port);
     }
-    return err_str;
+    return conn;
 }
 

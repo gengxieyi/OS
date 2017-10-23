@@ -8,17 +8,17 @@
 
 class Server {
     private :
-        int mThreadCount;
-        int mIndex;
-        std::map<int,Worker*> mWorkerMap;
+        gxy_int32_t mThreadCount;
+        gxy_int32_t mIndex;
+        std::map<gxy_int32_t,Worker*> mWorkerMap;
     public :
-        Server(int count) {
+        Server(gxy_int32_t count) {
             mThreadCount = count;
             mIndex = 0;
         }
-        int Init();
-        int Star();
-        int ProcessRequest(OpCtx*);
+        gxy_int32_t Init();
+        gxy_int32_t Start();
+        gxy_int32_t ProcessRequest(OpCtx*);
 };
 
 #endif

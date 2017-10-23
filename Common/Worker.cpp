@@ -25,3 +25,7 @@ void Worker::PostRequest(OpCtx* ctx) {
     mQueue.push(ctx);
 }
 
+void* Worker::Entry(OpCtx* ctx) {
+    
+}
+

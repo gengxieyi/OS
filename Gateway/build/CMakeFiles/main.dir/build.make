@@ -52,147 +52,9 @@ include CMakeFiles/main.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/main.dir/flags.make
 
-CMakeFiles/main.dir/Common.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/Common.cpp.o: ../Common.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/OS/Gateway/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/Common.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Common.cpp.o -c /root/OS/Gateway/Common.cpp
-
-CMakeFiles/main.dir/Common.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Common.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/OS/Gateway/Common.cpp > CMakeFiles/main.dir/Common.cpp.i
-
-CMakeFiles/main.dir/Common.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Common.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/OS/Gateway/Common.cpp -o CMakeFiles/main.dir/Common.cpp.s
-
-CMakeFiles/main.dir/Common.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/Common.cpp.o.requires
-
-CMakeFiles/main.dir/Common.cpp.o.provides: CMakeFiles/main.dir/Common.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Common.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/Common.cpp.o.provides
-
-CMakeFiles/main.dir/Common.cpp.o.provides.build: CMakeFiles/main.dir/Common.cpp.o
-
-CMakeFiles/main.dir/OpCtx.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/OpCtx.cpp.o: ../OpCtx.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/OS/Gateway/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/OpCtx.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/OpCtx.cpp.o -c /root/OS/Gateway/OpCtx.cpp
-
-CMakeFiles/main.dir/OpCtx.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/OpCtx.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/OS/Gateway/OpCtx.cpp > CMakeFiles/main.dir/OpCtx.cpp.i
-
-CMakeFiles/main.dir/OpCtx.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/OpCtx.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/OS/Gateway/OpCtx.cpp -o CMakeFiles/main.dir/OpCtx.cpp.s
-
-CMakeFiles/main.dir/OpCtx.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/OpCtx.cpp.o.requires
-
-CMakeFiles/main.dir/OpCtx.cpp.o.provides: CMakeFiles/main.dir/OpCtx.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/OpCtx.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/OpCtx.cpp.o.provides
-
-CMakeFiles/main.dir/OpCtx.cpp.o.provides.build: CMakeFiles/main.dir/OpCtx.cpp.o
-
-CMakeFiles/main.dir/Server.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/Server.cpp.o: ../Server.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/OS/Gateway/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/Server.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Server.cpp.o -c /root/OS/Gateway/Server.cpp
-
-CMakeFiles/main.dir/Server.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Server.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/OS/Gateway/Server.cpp > CMakeFiles/main.dir/Server.cpp.i
-
-CMakeFiles/main.dir/Server.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Server.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/OS/Gateway/Server.cpp -o CMakeFiles/main.dir/Server.cpp.s
-
-CMakeFiles/main.dir/Server.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/Server.cpp.o.requires
-
-CMakeFiles/main.dir/Server.cpp.o.provides: CMakeFiles/main.dir/Server.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Server.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/Server.cpp.o.provides
-
-CMakeFiles/main.dir/Server.cpp.o.provides.build: CMakeFiles/main.dir/Server.cpp.o
-
-CMakeFiles/main.dir/ServerManager.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/ServerManager.cpp.o: ../ServerManager.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/OS/Gateway/build/CMakeFiles $(CMAKE_PROGRESS_4)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/ServerManager.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/ServerManager.cpp.o -c /root/OS/Gateway/ServerManager.cpp
-
-CMakeFiles/main.dir/ServerManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/ServerManager.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/OS/Gateway/ServerManager.cpp > CMakeFiles/main.dir/ServerManager.cpp.i
-
-CMakeFiles/main.dir/ServerManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/ServerManager.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/OS/Gateway/ServerManager.cpp -o CMakeFiles/main.dir/ServerManager.cpp.s
-
-CMakeFiles/main.dir/ServerManager.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/ServerManager.cpp.o.requires
-
-CMakeFiles/main.dir/ServerManager.cpp.o.provides: CMakeFiles/main.dir/ServerManager.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ServerManager.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/ServerManager.cpp.o.provides
-
-CMakeFiles/main.dir/ServerManager.cpp.o.provides.build: CMakeFiles/main.dir/ServerManager.cpp.o
-
-CMakeFiles/main.dir/Worker.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/Worker.cpp.o: ../Worker.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/OS/Gateway/build/CMakeFiles $(CMAKE_PROGRESS_5)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/Worker.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Worker.cpp.o -c /root/OS/Gateway/Worker.cpp
-
-CMakeFiles/main.dir/Worker.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Worker.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/OS/Gateway/Worker.cpp > CMakeFiles/main.dir/Worker.cpp.i
-
-CMakeFiles/main.dir/Worker.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Worker.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/OS/Gateway/Worker.cpp -o CMakeFiles/main.dir/Worker.cpp.s
-
-CMakeFiles/main.dir/Worker.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/Worker.cpp.o.requires
-
-CMakeFiles/main.dir/Worker.cpp.o.provides: CMakeFiles/main.dir/Worker.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Worker.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/Worker.cpp.o.provides
-
-CMakeFiles/main.dir/Worker.cpp.o.provides.build: CMakeFiles/main.dir/Worker.cpp.o
-
-CMakeFiles/main.dir/Connection.cpp.o: CMakeFiles/main.dir/flags.make
-CMakeFiles/main.dir/Connection.cpp.o: ../Connection.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/OS/Gateway/build/CMakeFiles $(CMAKE_PROGRESS_6)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/Connection.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Connection.cpp.o -c /root/OS/Gateway/Connection.cpp
-
-CMakeFiles/main.dir/Connection.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/Connection.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/OS/Gateway/Connection.cpp > CMakeFiles/main.dir/Connection.cpp.i
-
-CMakeFiles/main.dir/Connection.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Connection.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/OS/Gateway/Connection.cpp -o CMakeFiles/main.dir/Connection.cpp.s
-
-CMakeFiles/main.dir/Connection.cpp.o.requires:
-.PHONY : CMakeFiles/main.dir/Connection.cpp.o.requires
-
-CMakeFiles/main.dir/Connection.cpp.o.provides: CMakeFiles/main.dir/Connection.cpp.o.requires
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Connection.cpp.o.provides.build
-.PHONY : CMakeFiles/main.dir/Connection.cpp.o.provides
-
-CMakeFiles/main.dir/Connection.cpp.o.provides.build: CMakeFiles/main.dir/Connection.cpp.o
-
 CMakeFiles/main.dir/Main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Main.cpp.o: ../Main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /root/OS/Gateway/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/OS/Gateway/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/Main.cpp.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Main.cpp.o -c /root/OS/Gateway/Main.cpp
 
@@ -213,26 +75,164 @@ CMakeFiles/main.dir/Main.cpp.o.provides: CMakeFiles/main.dir/Main.cpp.o.requires
 
 CMakeFiles/main.dir/Main.cpp.o.provides.build: CMakeFiles/main.dir/Main.cpp.o
 
+CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o: /root/OS/Common/Connection.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/OS/Gateway/build/CMakeFiles $(CMAKE_PROGRESS_2)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o -c /root/OS/Common/Connection.cpp
+
+CMakeFiles/main.dir/root/OS/Common/Connection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/root/OS/Common/Connection.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/OS/Common/Connection.cpp > CMakeFiles/main.dir/root/OS/Common/Connection.cpp.i
+
+CMakeFiles/main.dir/root/OS/Common/Connection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/root/OS/Common/Connection.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/OS/Common/Connection.cpp -o CMakeFiles/main.dir/root/OS/Common/Connection.cpp.s
+
+CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o.requires
+
+CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o.provides: CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o.provides
+
+CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o.provides.build: CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o
+
+CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o: /root/OS/Common/ErrCode.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/OS/Gateway/build/CMakeFiles $(CMAKE_PROGRESS_3)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o -c /root/OS/Common/ErrCode.cpp
+
+CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/OS/Common/ErrCode.cpp > CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.i
+
+CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/OS/Common/ErrCode.cpp -o CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.s
+
+CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o.requires
+
+CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o.provides: CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o.provides
+
+CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o.provides.build: CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o
+
+CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o: /root/OS/Common/OpCtx.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/OS/Gateway/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o -c /root/OS/Common/OpCtx.cpp
+
+CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/OS/Common/OpCtx.cpp > CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.i
+
+CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/OS/Common/OpCtx.cpp -o CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.s
+
+CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o.requires
+
+CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o.provides: CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o.provides
+
+CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o.provides.build: CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o
+
+CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o: /root/OS/Common/Worker.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/OS/Gateway/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o -c /root/OS/Common/Worker.cpp
+
+CMakeFiles/main.dir/root/OS/Common/Worker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/root/OS/Common/Worker.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/OS/Common/Worker.cpp > CMakeFiles/main.dir/root/OS/Common/Worker.cpp.i
+
+CMakeFiles/main.dir/root/OS/Common/Worker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/root/OS/Common/Worker.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/OS/Common/Worker.cpp -o CMakeFiles/main.dir/root/OS/Common/Worker.cpp.s
+
+CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o.requires
+
+CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o.provides: CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o.provides
+
+CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o.provides.build: CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o
+
+CMakeFiles/main.dir/root/OS/Common/Server.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/root/OS/Common/Server.cpp.o: /root/OS/Common/Server.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/OS/Gateway/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/root/OS/Common/Server.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/root/OS/Common/Server.cpp.o -c /root/OS/Common/Server.cpp
+
+CMakeFiles/main.dir/root/OS/Common/Server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/root/OS/Common/Server.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/OS/Common/Server.cpp > CMakeFiles/main.dir/root/OS/Common/Server.cpp.i
+
+CMakeFiles/main.dir/root/OS/Common/Server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/root/OS/Common/Server.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/OS/Common/Server.cpp -o CMakeFiles/main.dir/root/OS/Common/Server.cpp.s
+
+CMakeFiles/main.dir/root/OS/Common/Server.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/root/OS/Common/Server.cpp.o.requires
+
+CMakeFiles/main.dir/root/OS/Common/Server.cpp.o.provides: CMakeFiles/main.dir/root/OS/Common/Server.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/Server.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/root/OS/Common/Server.cpp.o.provides
+
+CMakeFiles/main.dir/root/OS/Common/Server.cpp.o.provides.build: CMakeFiles/main.dir/root/OS/Common/Server.cpp.o
+
+CMakeFiles/main.dir/root/OS/Common/Common.cpp.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/root/OS/Common/Common.cpp.o: /root/OS/Common/Common.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /root/OS/Gateway/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/main.dir/root/OS/Common/Common.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/main.dir/root/OS/Common/Common.cpp.o -c /root/OS/Common/Common.cpp
+
+CMakeFiles/main.dir/root/OS/Common/Common.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/root/OS/Common/Common.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /root/OS/Common/Common.cpp > CMakeFiles/main.dir/root/OS/Common/Common.cpp.i
+
+CMakeFiles/main.dir/root/OS/Common/Common.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/root/OS/Common/Common.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /root/OS/Common/Common.cpp -o CMakeFiles/main.dir/root/OS/Common/Common.cpp.s
+
+CMakeFiles/main.dir/root/OS/Common/Common.cpp.o.requires:
+.PHONY : CMakeFiles/main.dir/root/OS/Common/Common.cpp.o.requires
+
+CMakeFiles/main.dir/root/OS/Common/Common.cpp.o.provides: CMakeFiles/main.dir/root/OS/Common/Common.cpp.o.requires
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/Common.cpp.o.provides.build
+.PHONY : CMakeFiles/main.dir/root/OS/Common/Common.cpp.o.provides
+
+CMakeFiles/main.dir/root/OS/Common/Common.cpp.o.provides.build: CMakeFiles/main.dir/root/OS/Common/Common.cpp.o
+
 # Object files for target main
 main_OBJECTS = \
-"CMakeFiles/main.dir/Common.cpp.o" \
-"CMakeFiles/main.dir/OpCtx.cpp.o" \
-"CMakeFiles/main.dir/Server.cpp.o" \
-"CMakeFiles/main.dir/ServerManager.cpp.o" \
-"CMakeFiles/main.dir/Worker.cpp.o" \
-"CMakeFiles/main.dir/Connection.cpp.o" \
-"CMakeFiles/main.dir/Main.cpp.o"
+"CMakeFiles/main.dir/Main.cpp.o" \
+"CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o" \
+"CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o" \
+"CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o" \
+"CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o" \
+"CMakeFiles/main.dir/root/OS/Common/Server.cpp.o" \
+"CMakeFiles/main.dir/root/OS/Common/Common.cpp.o"
 
 # External object files for target main
 main_EXTERNAL_OBJECTS =
 
-main: CMakeFiles/main.dir/Common.cpp.o
-main: CMakeFiles/main.dir/OpCtx.cpp.o
-main: CMakeFiles/main.dir/Server.cpp.o
-main: CMakeFiles/main.dir/ServerManager.cpp.o
-main: CMakeFiles/main.dir/Worker.cpp.o
-main: CMakeFiles/main.dir/Connection.cpp.o
 main: CMakeFiles/main.dir/Main.cpp.o
+main: CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o
+main: CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o
+main: CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o
+main: CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o
+main: CMakeFiles/main.dir/root/OS/Common/Server.cpp.o
+main: CMakeFiles/main.dir/root/OS/Common/Common.cpp.o
 main: CMakeFiles/main.dir/build.make
 main: CMakeFiles/main.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable main"
@@ -242,13 +242,13 @@ main: CMakeFiles/main.dir/link.txt
 CMakeFiles/main.dir/build: main
 .PHONY : CMakeFiles/main.dir/build
 
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/Common.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/OpCtx.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/Server.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/ServerManager.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/Worker.cpp.o.requires
-CMakeFiles/main.dir/requires: CMakeFiles/main.dir/Connection.cpp.o.requires
 CMakeFiles/main.dir/requires: CMakeFiles/main.dir/Main.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/root/OS/Common/Server.cpp.o.requires
+CMakeFiles/main.dir/requires: CMakeFiles/main.dir/root/OS/Common/Common.cpp.o.requires
 .PHONY : CMakeFiles/main.dir/requires
 
 CMakeFiles/main.dir/clean:

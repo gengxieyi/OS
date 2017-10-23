@@ -1,11 +1,11 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/main.dir/Common.cpp.o"
-  "CMakeFiles/main.dir/OpCtx.cpp.o"
-  "CMakeFiles/main.dir/Server.cpp.o"
-  "CMakeFiles/main.dir/ServerManager.cpp.o"
-  "CMakeFiles/main.dir/Worker.cpp.o"
-  "CMakeFiles/main.dir/Connection.cpp.o"
   "CMakeFiles/main.dir/Main.cpp.o"
+  "CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o"
+  "CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o"
+  "CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o"
+  "CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o"
+  "CMakeFiles/main.dir/root/OS/Common/Server.cpp.o"
+  "CMakeFiles/main.dir/root/OS/Common/Common.cpp.o"
   "main.pdb"
   "main"
 )
