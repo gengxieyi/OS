@@ -2,6 +2,7 @@
 #define COMMONDEFINE_HPP_
 
 #define INDEX_COUNT 1024*1024
+#define LISTEN_PORT 1234
 
 typedef signed short gxy_int16_t;
 typedef unsigned short gxy_uint16_t;

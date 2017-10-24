@@ -6,6 +6,7 @@
 #include <errno.h>
 #include <string.h>
 #include <sys/types.h>
+#include <sys/time.h>
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <iostream>
@@ -49,20 +50,51 @@ int SocketCreate(int port)
 Connection* SocketAccept(int st)
 {
     Connection* conn = NULL;
+    fd_set fds;
+    struct timeval timeout={0,0};
 	int client_st;
 	struct sockaddr_in client_sockaddr;
 	socklen_t len = sizeof(client_sockaddr);
-
+    FD_SET(st,&fds);
 	memset(&client_sockaddr, 0, sizeof(client_sockaddr));
 
-	client_st = accept(st, (struct sockaddr *) &client_sockaddr, &len);
-	if (client_st == -1)
-	{
-	    std::cout << "accept failture : " << strerror(errno);
-		return 0;
-	} else {
-        conn = new Connection(client_st,inet_ntoa(client_sockaddr.sin_addr),client_sockaddr.sin_port);
+    int ret = select(st + 1,&fds,NULL,NULL,&timeout);
+    if (ret == -1) {
+	    std::cout << "select failture : " << strerror(errno);
+    } else if (ret == 0) {
+	    std::cout << "time out" << std::endl;
+    } else if (FD_ISSET(st,&fds)) {
+	    client_st = accept(st, (struct sockaddr *) &client_sockaddr, &len);
+	    if (client_st == -1)
+	    {
+	        std::cout << "accept failture : " << strerror(errno);
+	    } else {
+            conn = new Connection(client_st,inet_ntoa(client_sockaddr.sin_addr),client_sockaddr.sin_port);
+        }
     }
     return conn;
 }
 
+int ReadOp(int st,int* op)
+{
+    int ret = recv(st,op,sizeof(int),MSG_DONTWAIT);
+    return ret;
+}
+
+std::string ParseOpCode(int op)
+{
+    switch (op) {
+        case ePut :
+            return "Put";
+        case eGet : 
+            return "Get";
+        case eDelete :
+            return "Delete";
+        case ePing :
+            return "Ping";
+        case eAdd :
+            return "Add";
+        default:
+            return "unknown";
+    }
+}

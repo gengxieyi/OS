@@ -4,10 +4,18 @@
 class Connection;
 enum OpType {
     ePut = 1,
-    eGet = 2,
-    eDelete = 3
+    eGet,
+    eDelete,
+
+    ePing = 11,
+    
+    eAdd = 21,
 };
+
 int SocketCreate(int port);
 Connection* SocketAccept(int st);
+int ReadOp(int st,int* op);
+
+std::string ParseOpCode(int op);
 
 #endif

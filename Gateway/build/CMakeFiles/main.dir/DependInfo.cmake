@@ -4,6 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
+  "/root/OS/Gateway/ConnectionWorker.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/ConnectionWorker.cpp.o"
   "/root/OS/Gateway/Main.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Main.cpp.o"
   "/root/OS/Common/Common.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Common/Common.cpp.o"
   "/root/OS/Common/Connection.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o"

@@ -114,11 +114,36 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
+ConnectionWorker.o: ConnectionWorker.cpp.o
+.PHONY : ConnectionWorker.o
+
+# target to build an object file
+ConnectionWorker.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ConnectionWorker.cpp.o
+.PHONY : ConnectionWorker.cpp.o
+
+ConnectionWorker.i: ConnectionWorker.cpp.i
+.PHONY : ConnectionWorker.i
+
+# target to preprocess a source file
+ConnectionWorker.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ConnectionWorker.cpp.i
+.PHONY : ConnectionWorker.cpp.i
+
+ConnectionWorker.s: ConnectionWorker.cpp.s
+.PHONY : ConnectionWorker.s
+
+# target to generate assembly for a file
+ConnectionWorker.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ConnectionWorker.cpp.s
+.PHONY : ConnectionWorker.cpp.s
+
 Main.o: Main.cpp.o
 .PHONY : Main.o
 
 # target to build an object file
 Main.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main.cpp.o
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main.cpp.o
 .PHONY : Main.cpp.o
 
@@ -128,6 +153,7 @@ Main.i: Main.cpp.i
 # target to preprocess a source file
 Main.cpp.i:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main.cpp.i
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main.cpp.i
 .PHONY : Main.cpp.i
 
 Main.s: Main.cpp.s
@@ -135,6 +161,7 @@ Main.s: Main.cpp.s
 
 # target to generate assembly for a file
 Main.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main.cpp.s
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main.cpp.s
 .PHONY : Main.cpp.s
 
@@ -291,6 +318,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... main"
 	@echo "... rebuild_cache"
+	@echo "... ConnectionWorker.o"
+	@echo "... ConnectionWorker.i"
+	@echo "... ConnectionWorker.s"
 	@echo "... Main.o"
 	@echo "... Main.i"
 	@echo "... Main.s"

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "../../Common/SafeQueue.hpp"
+#include "../../Common/Worker.hpp"
 int main()
 {
     SafeQueue<int> q;

@@ -4,7 +4,7 @@
 
 #include "Worker.hpp"
 #include <map>
-#define WORK_BASE "/afei"
+#include "CommonDefine.hpp"
 
 class Server {
     private :

@@ -1,22 +1,21 @@
 #ifndef WORKER_HPP_
 #define WORKER_HPP_
 
-#include <queue>
-#include "OpCtx.hpp"
+#include "SafeQueue.hpp"
+class OpCtx;
 
 class Worker {
     private :
         static void* _entry_func_(void* arg) {
-            void* r = ((Worker*)arg)->entry();
+            void* r = ((Worker*)arg)->Entry();
             return r;
         }
-        void* Entry();
     protected :
-        virtual void* entry() = 0;
-        std::queue<OpCtx*> mQueue;
+        SafeQueue<OpCtx*> mQueue;
+        virtual void* Entry() = 0;
     public :
         Worker(){}
-        void ProcessResult(OpCtx*) = 0;
+        ~Worker(){}
         int Start();
         void PostRequest(OpCtx* ctx);
 };

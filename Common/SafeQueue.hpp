@@ -22,6 +22,14 @@ class SafeQueue {
                 mLocker.Unlock();
             }
         }
+        void Dequeue(std::vector<T>& vec) {
+            mLocker.Lock();
+            for (int i = 0;i < mData.size();i++) {
+                vec.push_back(mData[i]);
+            }
+            mData.Clear();
+            mLocker.Unlock();
+        }
         bool Empty() {
             return mData.size() == 0;
         }

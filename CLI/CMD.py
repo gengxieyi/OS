@@ -1,20 +1,20 @@
 import sys
 import socket
+import struct
 
 class Command(object):
-    def __init__(self,op,ip,port,disks):
+    def __init__(self,op,ip,port):
         self.op = op
         self.ip = ip
         self.port = port
-        self.disks = disks
 
     def execute(self):
         s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         s.connect((self.ip,int(self.port)));
-        buf = self.op
-        for disk in disks:
-            buf += " " + disk
-        s.send(buf);
+        buf = int(op)
+        st = struct.Struct('I')
+
+        s.send(st.pack(buf));
         result = s.recv(1024);
         print result
 
@@ -22,15 +22,13 @@ class Command(object):
         print self.op
         print self.ip
         print self.port
-        print self.disks
 
 if __name__ == "__main__":
-    if len(sys.argv) < 5:
+    if len(sys.argv) < 4:
         print "error"
     else :
         op = sys.argv[1]
         ip = sys.argv[2]
         port = sys.argv[3]
-        disks = sys.argv[4:]
-        command = Command(op,ip,port,disks)
+        command = Command(op,ip,port)
         command.execute()
