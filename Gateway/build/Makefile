@@ -114,56 +114,149 @@ main/fast:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-ConnectionWorker.o: ConnectionWorker.cpp.o
-.PHONY : ConnectionWorker.o
+Main/Main.o: Main/Main.cpp.o
+.PHONY : Main/Main.o
 
 # target to build an object file
-ConnectionWorker.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ConnectionWorker.cpp.o
-.PHONY : ConnectionWorker.cpp.o
+Main/Main.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main/Main.cpp.o
+.PHONY : Main/Main.cpp.o
 
-ConnectionWorker.i: ConnectionWorker.cpp.i
-.PHONY : ConnectionWorker.i
+Main/Main.i: Main/Main.cpp.i
+.PHONY : Main/Main.i
 
 # target to preprocess a source file
-ConnectionWorker.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ConnectionWorker.cpp.i
-.PHONY : ConnectionWorker.cpp.i
+Main/Main.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main/Main.cpp.i
+.PHONY : Main/Main.cpp.i
 
-ConnectionWorker.s: ConnectionWorker.cpp.s
-.PHONY : ConnectionWorker.s
+Main/Main.s: Main/Main.cpp.s
+.PHONY : Main/Main.s
 
 # target to generate assembly for a file
-ConnectionWorker.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/ConnectionWorker.cpp.s
-.PHONY : ConnectionWorker.cpp.s
+Main/Main.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main/Main.cpp.s
+.PHONY : Main/Main.cpp.s
 
-Main.o: Main.cpp.o
-.PHONY : Main.o
+Request/RequestHandler.o: Request/RequestHandler.cpp.o
+.PHONY : Request/RequestHandler.o
 
 # target to build an object file
-Main.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main.cpp.o
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main.cpp.o
-.PHONY : Main.cpp.o
+Request/RequestHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Request/RequestHandler.cpp.o
+.PHONY : Request/RequestHandler.cpp.o
 
-Main.i: Main.cpp.i
-.PHONY : Main.i
+Request/RequestHandler.i: Request/RequestHandler.cpp.i
+.PHONY : Request/RequestHandler.i
 
 # target to preprocess a source file
-Main.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main.cpp.i
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main.cpp.i
-.PHONY : Main.cpp.i
+Request/RequestHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Request/RequestHandler.cpp.i
+.PHONY : Request/RequestHandler.cpp.i
 
-Main.s: Main.cpp.s
-.PHONY : Main.s
+Request/RequestHandler.s: Request/RequestHandler.cpp.s
+.PHONY : Request/RequestHandler.s
 
 # target to generate assembly for a file
-Main.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main.cpp.s
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main.cpp.s
-.PHONY : Main.cpp.s
+Request/RequestHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Request/RequestHandler.cpp.s
+.PHONY : Request/RequestHandler.cpp.s
+
+Request/RequestManager.o: Request/RequestManager.cpp.o
+.PHONY : Request/RequestManager.o
+
+# target to build an object file
+Request/RequestManager.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Request/RequestManager.cpp.o
+.PHONY : Request/RequestManager.cpp.o
+
+Request/RequestManager.i: Request/RequestManager.cpp.i
+.PHONY : Request/RequestManager.i
+
+# target to preprocess a source file
+Request/RequestManager.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Request/RequestManager.cpp.i
+.PHONY : Request/RequestManager.cpp.i
+
+Request/RequestManager.s: Request/RequestManager.cpp.s
+.PHONY : Request/RequestManager.s
+
+# target to generate assembly for a file
+Request/RequestManager.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Request/RequestManager.cpp.s
+.PHONY : Request/RequestManager.cpp.s
+
+Request/RequestReceiver.o: Request/RequestReceiver.cpp.o
+.PHONY : Request/RequestReceiver.o
+
+# target to build an object file
+Request/RequestReceiver.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Request/RequestReceiver.cpp.o
+.PHONY : Request/RequestReceiver.cpp.o
+
+Request/RequestReceiver.i: Request/RequestReceiver.cpp.i
+.PHONY : Request/RequestReceiver.i
+
+# target to preprocess a source file
+Request/RequestReceiver.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Request/RequestReceiver.cpp.i
+.PHONY : Request/RequestReceiver.cpp.i
+
+Request/RequestReceiver.s: Request/RequestReceiver.cpp.s
+.PHONY : Request/RequestReceiver.s
+
+# target to generate assembly for a file
+Request/RequestReceiver.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Request/RequestReceiver.cpp.s
+.PHONY : Request/RequestReceiver.cpp.s
+
+Request/ResponseManager.o: Request/ResponseManager.cpp.o
+.PHONY : Request/ResponseManager.o
+
+# target to build an object file
+Request/ResponseManager.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Request/ResponseManager.cpp.o
+.PHONY : Request/ResponseManager.cpp.o
+
+Request/ResponseManager.i: Request/ResponseManager.cpp.i
+.PHONY : Request/ResponseManager.i
+
+# target to preprocess a source file
+Request/ResponseManager.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Request/ResponseManager.cpp.i
+.PHONY : Request/ResponseManager.cpp.i
+
+Request/ResponseManager.s: Request/ResponseManager.cpp.s
+.PHONY : Request/ResponseManager.s
+
+# target to generate assembly for a file
+Request/ResponseManager.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Request/ResponseManager.cpp.s
+.PHONY : Request/ResponseManager.cpp.s
+
+Request/Responser.o: Request/Responser.cpp.o
+.PHONY : Request/Responser.o
+
+# target to build an object file
+Request/Responser.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Request/Responser.cpp.o
+.PHONY : Request/Responser.cpp.o
+
+Request/Responser.i: Request/Responser.cpp.i
+.PHONY : Request/Responser.i
+
+# target to preprocess a source file
+Request/Responser.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Request/Responser.cpp.i
+.PHONY : Request/Responser.cpp.i
+
+Request/Responser.s: Request/Responser.cpp.s
+.PHONY : Request/Responser.s
+
+# target to generate assembly for a file
+Request/Responser.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Request/Responser.cpp.s
+.PHONY : Request/Responser.cpp.s
 
 root/OS/Common/Common.o: root/OS/Common/Common.cpp.o
 .PHONY : root/OS/Common/Common.o
@@ -309,6 +402,78 @@ root/OS/Common/Worker.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/Worker.cpp.s
 .PHONY : root/OS/Common/Worker.cpp.s
 
+root/OS/Worker/DB/Index.o: root/OS/Worker/DB/Index.cpp.o
+.PHONY : root/OS/Worker/DB/Index.o
+
+# target to build an object file
+root/OS/Worker/DB/Index.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Worker/DB/Index.cpp.o
+.PHONY : root/OS/Worker/DB/Index.cpp.o
+
+root/OS/Worker/DB/Index.i: root/OS/Worker/DB/Index.cpp.i
+.PHONY : root/OS/Worker/DB/Index.i
+
+# target to preprocess a source file
+root/OS/Worker/DB/Index.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Worker/DB/Index.cpp.i
+.PHONY : root/OS/Worker/DB/Index.cpp.i
+
+root/OS/Worker/DB/Index.s: root/OS/Worker/DB/Index.cpp.s
+.PHONY : root/OS/Worker/DB/Index.s
+
+# target to generate assembly for a file
+root/OS/Worker/DB/Index.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Worker/DB/Index.cpp.s
+.PHONY : root/OS/Worker/DB/Index.cpp.s
+
+root/OS/Worker/DB/KVDatabase.o: root/OS/Worker/DB/KVDatabase.cpp.o
+.PHONY : root/OS/Worker/DB/KVDatabase.o
+
+# target to build an object file
+root/OS/Worker/DB/KVDatabase.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Worker/DB/KVDatabase.cpp.o
+.PHONY : root/OS/Worker/DB/KVDatabase.cpp.o
+
+root/OS/Worker/DB/KVDatabase.i: root/OS/Worker/DB/KVDatabase.cpp.i
+.PHONY : root/OS/Worker/DB/KVDatabase.i
+
+# target to preprocess a source file
+root/OS/Worker/DB/KVDatabase.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Worker/DB/KVDatabase.cpp.i
+.PHONY : root/OS/Worker/DB/KVDatabase.cpp.i
+
+root/OS/Worker/DB/KVDatabase.s: root/OS/Worker/DB/KVDatabase.cpp.s
+.PHONY : root/OS/Worker/DB/KVDatabase.s
+
+# target to generate assembly for a file
+root/OS/Worker/DB/KVDatabase.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Worker/DB/KVDatabase.cpp.s
+.PHONY : root/OS/Worker/DB/KVDatabase.cpp.s
+
+root/OS/Worker/DB/Unit.o: root/OS/Worker/DB/Unit.cpp.o
+.PHONY : root/OS/Worker/DB/Unit.o
+
+# target to build an object file
+root/OS/Worker/DB/Unit.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Worker/DB/Unit.cpp.o
+.PHONY : root/OS/Worker/DB/Unit.cpp.o
+
+root/OS/Worker/DB/Unit.i: root/OS/Worker/DB/Unit.cpp.i
+.PHONY : root/OS/Worker/DB/Unit.i
+
+# target to preprocess a source file
+root/OS/Worker/DB/Unit.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Worker/DB/Unit.cpp.i
+.PHONY : root/OS/Worker/DB/Unit.cpp.i
+
+root/OS/Worker/DB/Unit.s: root/OS/Worker/DB/Unit.cpp.s
+.PHONY : root/OS/Worker/DB/Unit.s
+
+# target to generate assembly for a file
+root/OS/Worker/DB/Unit.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Worker/DB/Unit.cpp.s
+.PHONY : root/OS/Worker/DB/Unit.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -318,12 +483,24 @@ help:
 	@echo "... edit_cache"
 	@echo "... main"
 	@echo "... rebuild_cache"
-	@echo "... ConnectionWorker.o"
-	@echo "... ConnectionWorker.i"
-	@echo "... ConnectionWorker.s"
-	@echo "... Main.o"
-	@echo "... Main.i"
-	@echo "... Main.s"
+	@echo "... Main/Main.o"
+	@echo "... Main/Main.i"
+	@echo "... Main/Main.s"
+	@echo "... Request/RequestHandler.o"
+	@echo "... Request/RequestHandler.i"
+	@echo "... Request/RequestHandler.s"
+	@echo "... Request/RequestManager.o"
+	@echo "... Request/RequestManager.i"
+	@echo "... Request/RequestManager.s"
+	@echo "... Request/RequestReceiver.o"
+	@echo "... Request/RequestReceiver.i"
+	@echo "... Request/RequestReceiver.s"
+	@echo "... Request/ResponseManager.o"
+	@echo "... Request/ResponseManager.i"
+	@echo "... Request/ResponseManager.s"
+	@echo "... Request/Responser.o"
+	@echo "... Request/Responser.i"
+	@echo "... Request/Responser.s"
 	@echo "... root/OS/Common/Common.o"
 	@echo "... root/OS/Common/Common.i"
 	@echo "... root/OS/Common/Common.s"
@@ -342,6 +519,15 @@ help:
 	@echo "... root/OS/Common/Worker.o"
 	@echo "... root/OS/Common/Worker.i"
 	@echo "... root/OS/Common/Worker.s"
+	@echo "... root/OS/Worker/DB/Index.o"
+	@echo "... root/OS/Worker/DB/Index.i"
+	@echo "... root/OS/Worker/DB/Index.s"
+	@echo "... root/OS/Worker/DB/KVDatabase.o"
+	@echo "... root/OS/Worker/DB/KVDatabase.i"
+	@echo "... root/OS/Worker/DB/KVDatabase.s"
+	@echo "... root/OS/Worker/DB/Unit.o"
+	@echo "... root/OS/Worker/DB/Unit.i"
+	@echo "... root/OS/Worker/DB/Unit.s"
 .PHONY : help
 
 

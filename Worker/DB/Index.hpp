@@ -21,7 +21,7 @@ class Index {
                 mValueSize = -1;
                 mIndex = -1;
             }
-            Node(const string& key,gxy_uint64_t offset,gxy_uint32_t size){
+            Node(const string& key,unsigned long long offset,unsigned int size){
                 mKey = key;
                 mOffset = offset;
                 mLeft = NULL;
@@ -34,9 +34,9 @@ class Index {
             Node* mLeft;
             Node* mRight;
             string mKey;
-            gxy_uint64_t mOffset;
-            gxy_uint32_t mValueSize;
-            gxy_uint32_t mIndex;
+            unsigned long long mOffset;
+            unsigned int mValueSize;
+            unsigned int mIndex;
     };
 
     public :
@@ -48,21 +48,21 @@ class Index {
         ~Index() {
             Release(mHeader);
         }
-        gxy_result_t Open();
-        gxy_result_t Close();
-        gxy_result_t FlushBitset();
-        gxy_result_t ReloadBitset();
-        gxy_result_t ReloadIndex();
-        gxy_result_t Put(const string&,gxy_uint64_t,gxy_uint32_t);
-        gxy_result_t Flush(Node*);
-        gxy_result_t Decode(Node*);
-        gxy_result_t Get(const string&,gxy_uint64_t&,gxy_uint32_t&);
-        void List(vector<string>&,vector<gxy_uint64_t>&,vector<gxy_uint32_t>&);
+        int Open();
+        int Close();
+        int FlushBitset();
+        int ReloadBitset();
+        int ReloadIndex();
+        int Put(const string&,unsigned long long,unsigned int);
+        int Flush(Node*);
+        int Decode(Node*);
+        int Get(const string&,unsigned long long&,unsigned int&);
+        void List(vector<string>&,vector<unsigned long long>&,vector<unsigned int>&);
         bool Find(const string&);
         void Release(Node*);
     private :
-        gxy_result_t Insert(Node*& p,Node* n);
-        void List(Node*,vector<string>&,vector<gxy_uint64_t>&,vector<gxy_uint32_t>&);
+        int Insert(Node*& p,Node* n);
+        void List(Node*,vector<string>&,vector<unsigned long long>&,vector<unsigned int>&);
         Node* mHeader;
         string mFileName;
         FILE* mFile;

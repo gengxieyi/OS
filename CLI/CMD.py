@@ -1,31 +1,48 @@
 import sys
 import socket
 import struct
+import datetime
 
 class Command(object):
-    def __init__(self,ip,port,op,key,value):
+    def __init__(self,ip,port):
         self.ip = ip
         self.port = port
-        self.op = op
-        self.key = key
-        self.value = value
 
-    def execute(self):
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect((self.ip,int(self.port)));
-        pattern = "<ii"+str(len(self.key))+"si"+str(len(self.value))+"s"
-        print pattern
-        data = struct.pack(pattern,int(self.op),len(self.key),self.key,len(self.value),self.value);
-        s.send(data);
+    def write(self):
+        for i in range(100000) :
+            key = "key" + str(i)
+            value = "value" + str(i)
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s.connect((self.ip,int(self.port)));
+            pattern = "<ii"+str(len(key))+"si"+str(len(value))+"s"
+            data = struct.pack(pattern,1,len(key),key,len(value),value);
+            s.send(data);
+            result = s.recv(1024);
+            print result
+    def read(self):
+        for i in range(100000) :
+            key = "key" + str(i)
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s.connect((self.ip,int(self.port)));
+            pattern = "<ii"+str(len(key))+"s"
+            data = struct.pack(pattern,2,len(key),key);
+            s.send(data);
+            result = s.recv(1024);
+            if result == "value" + str(i) :
+                print "success"
 
 if __name__ == "__main__":
-    if len(sys.argv) < 6:
+    if len(sys.argv) < 4:
         print "error"
     else :
         ip = sys.argv[1]
         port = sys.argv[2]
         op = sys.argv[3]
-        key = sys.argv[4]
-        value = sys.argv[5]
-        command = Command(ip,port,op,key,value)
-        command.execute()
+
+        command = Command(ip,port)
+        print datetime.datetime.now()
+        if op == "put" :
+            command.write()
+        elif op == "get" :
+            command.read()
+        print datetime.datetime.now()

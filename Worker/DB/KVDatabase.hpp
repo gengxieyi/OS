@@ -14,10 +14,10 @@ class KVDatabase {
             mIndexName = indexname;
         }
         ~KVDatabase(){};
-        gxy_result_t Open();
-        gxy_result_t Close();
-        gxy_result_t Write(const string& key,const string& value);
-        gxy_result_t List(vector<string>&,vector<string>&);
+        int Open();
+        int Close();
+        int Write(const string& key,const string& value);
+        int List(vector<string>&,vector<string>&);
         string Read(const string& key);
     private :
         string mDir;

@@ -1,8 +1,9 @@
 #include "KVDatabase.hpp"
+#include <iostream>
 
-gxy_result_t KVDatabase::Open()
+int KVDatabase::Open()
 {
-    gxy_result_t ret = SUCCESS;
+    int ret = SUCCESS;
     ret = mUnit.Open();
     if (ret) {
         return ret;
@@ -11,9 +12,9 @@ gxy_result_t KVDatabase::Open()
     return ret;
 }
 
-gxy_result_t KVDatabase::Close()
+int KVDatabase::Close()
 {
-    gxy_result_t ret = SUCCESS;
+    int ret = SUCCESS;
     ret = mUnit.Close();
     if (ret) {
         return ret;
@@ -22,39 +23,45 @@ gxy_result_t KVDatabase::Close()
     return ret;
 }
 
-gxy_result_t KVDatabase::Write(const string& key,const string& value)
+int KVDatabase::Write(const string& key,const string& value)
 {
-    gxy_uint64_t offset = mUnit.GetOffset();
-    gxy_result_t ret = mUnit.Write((unsigned char*)value.c_str(),value.length());
+    unsigned long long offset = mUnit.GetOffset();
+    int ret = mUnit.Write((unsigned char*)value.c_str(),value.length());
     if (ret != 0) {
+        std::cout << "write unit failed : " << ret << std::endl;
         return ret;
     }
     ret = mIndex.Put(key,offset,value.length());
+    if (ret != 0) {
+        std::cout << "write index failed : " << ret << std::endl;
+    }
     return ret;
 }
 
 string KVDatabase::Read(const string& key)
 {
-    gxy_result_t ret = SUCCESS;
-    gxy_uint32_t len = 0;
-    gxy_uint64_t offset = 0;
+    int ret = SUCCESS;
+    unsigned int len = 0;
+    unsigned long long offset = 0;
     ret = mIndex.Get(key,offset,len);
     if (ret != 0) {
+        std::cout << "read index failed : " << ret << std::endl;
         return "";
     }
     char value[len];
     ret = mUnit.Read(offset,(unsigned char*)value,len);
     if (ret != 0) {
+        std::cout << "read unit failed : " << ret << std::endl;
         return "";
     }
     return string(value,len);
 }
         
-gxy_result_t KVDatabase::List(vector<string>& keys,vector<string>& values)
+int KVDatabase::List(vector<string>& keys,vector<string>& values)
 {
-    gxy_result_t ret = SUCCESS;
-    vector<gxy_uint64_t> offsets;
-    vector<gxy_uint32_t> lens;
+    int ret = SUCCESS;
+    vector<unsigned long long> offsets;
+    vector<unsigned int> lens;
     mIndex.List(keys,offsets,lens);
     if (keys.size() != offsets.size() || keys.size() != lens.size()) {
         ret = LIST_INDEX_ERROR;

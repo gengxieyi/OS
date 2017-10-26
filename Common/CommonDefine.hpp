@@ -2,14 +2,10 @@
 #define COMMONDEFINE_HPP_
 
 #define INDEX_COUNT 1024*1024
-#define LISTEN_PORT 1234
-
-typedef signed short gxy_int16_t;
-typedef unsigned short gxy_uint16_t;
-typedef signed int gxy_int32_t;
-typedef unsigned int gxy_uint32_t;
-typedef signed long long gxy_int64_t;
-typedef unsigned long long gxy_uint64_t;
-typedef unsigned int gxy_result_t;
+#define REQUEST_PORT 1991
+#define MANAGE_PORT 1993
+#define REQUEST_HANDLER_NUM 1
+#define RESPONSER_NUM 1
+#define TRY_COUNT 1000
 
 #endif

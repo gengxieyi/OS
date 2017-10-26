@@ -11,7 +11,7 @@ int Server::Start() {
     return 0;
 }
 
-int Server::ProcessRequest(OpCtx* ctx) {
+int Server::PostRequest(OpCtx* ctx) {
     mWorkerMap[mIndex]->PostRequest(ctx);
     mIndex = (mIndex + 1) % mThreadCount;
     return 0;

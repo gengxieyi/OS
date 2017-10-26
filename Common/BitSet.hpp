@@ -5,14 +5,14 @@ class BitSet {
     public :
         BitSet(int n) {
             mSize = n / 8;
-            buf = new char[mSize];
+            buf = new unsigned char[mSize];
         }
         ~BitSet() {
             delete[] buf;
         }
         
         void Set(int n) {
-            char* p = buf + n/8;
+            unsigned char* p = buf + n/8;
             int offset = n % 8;
             *p = *p | (128 >> offset);
         }
@@ -22,13 +22,13 @@ class BitSet {
         }
 
         void Reset(int n) {
-            char* p = buf + n/8;
+            unsigned char* p = buf + n/8;
             int offset = n % 8;
             *p = *p & (255 - (128 >> offset));
         }
 
         bool Test(int n) {
-            char* p = buf + n / 8;
+            unsigned char* p = buf + n / 8;
             int offset = n % 8;
             return *p & (128 >> offset);
         }
@@ -51,14 +51,14 @@ class BitSet {
             return i * 8 + offset;
         }
 
-        char* GetChar(int n) {
+        unsigned char* GetChar(int n) {
             return buf + n;
         }
         int GetSize() {
             return mSize * 8;
         }
     private :
-        char* buf;
+        unsigned char* buf;
         int mSize;
 };
 

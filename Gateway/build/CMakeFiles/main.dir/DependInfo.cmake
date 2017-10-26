@@ -4,14 +4,21 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/root/OS/Gateway/ConnectionWorker.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/ConnectionWorker.cpp.o"
-  "/root/OS/Gateway/Main.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Main.cpp.o"
+  "/root/OS/Gateway/Main/Main.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Main/Main.cpp.o"
+  "/root/OS/Gateway/Request/RequestHandler.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Request/RequestHandler.cpp.o"
+  "/root/OS/Gateway/Request/RequestManager.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Request/RequestManager.cpp.o"
+  "/root/OS/Gateway/Request/RequestReceiver.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Request/RequestReceiver.cpp.o"
+  "/root/OS/Gateway/Request/ResponseManager.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Request/ResponseManager.cpp.o"
+  "/root/OS/Gateway/Request/Responser.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Request/Responser.cpp.o"
   "/root/OS/Common/Common.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Common/Common.cpp.o"
   "/root/OS/Common/Connection.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Common/Connection.cpp.o"
   "/root/OS/Common/ErrCode.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Common/ErrCode.cpp.o"
   "/root/OS/Common/OpCtx.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o"
   "/root/OS/Common/Server.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Common/Server.cpp.o"
   "/root/OS/Common/Worker.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o"
+  "/root/OS/Worker/DB/Index.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Worker/DB/Index.cpp.o"
+  "/root/OS/Worker/DB/KVDatabase.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Worker/DB/KVDatabase.cpp.o"
+  "/root/OS/Worker/DB/Unit.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Worker/DB/Unit.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

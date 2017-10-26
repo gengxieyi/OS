@@ -7,18 +7,18 @@
 #include "CommonDefine.hpp"
 
 class Server {
-    private :
-        gxy_int32_t mThreadCount;
-        gxy_int32_t mIndex;
-        std::map<gxy_int32_t,Worker*> mWorkerMap;
+    protected :
+        int mThreadCount;
+        int mIndex;
+        std::map<int,Worker*> mWorkerMap;
     public :
-        Server(gxy_int32_t count) {
+        Server(int count) {
             mThreadCount = count;
             mIndex = 0;
         }
-        gxy_int32_t Init();
-        gxy_int32_t Start();
-        gxy_int32_t ProcessRequest(OpCtx*);
+        virtual int Init() = 0;
+        int Start();
+        int PostRequest(OpCtx*);
 };
 
 #endif

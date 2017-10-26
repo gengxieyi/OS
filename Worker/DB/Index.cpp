@@ -1,4 +1,5 @@
 #include "Index.hpp"
+#include <iostream>
 
 void Index::Release(Node* n)
 {
@@ -9,7 +10,7 @@ void Index::Release(Node* n)
     }
 }
 
-gxy_result_t Index::Put(const string& key,gxy_uint64_t offset,gxy_uint32_t len)
+int Index::Put(const string& key,unsigned long long offset,unsigned int len)
 {
     if (Find(key)) {
         return INDEX_ALREADY_EXIST;
@@ -30,7 +31,7 @@ gxy_result_t Index::Put(const string& key,gxy_uint64_t offset,gxy_uint32_t len)
     return Insert(mHeader,node);
 }
 
-gxy_result_t Index::Insert(Node*& p,Node* n)
+int Index::Insert(Node*& p,Node* n)
 {
     int ret = SUCCESS;
     if (p == NULL) {
@@ -63,8 +64,8 @@ bool Index::Find(const string& key)
     return result;
 }
 
-gxy_result_t Index::Get(const string& key,gxy_uint64_t& offset,
-        gxy_uint32_t& len)
+int Index::Get(const string& key,unsigned long long& offset,
+        unsigned int& len)
 {
     Node* p = mHeader;
     while(p != NULL) {
@@ -81,7 +82,7 @@ gxy_result_t Index::Get(const string& key,gxy_uint64_t& offset,
     return INDEX_NOT_EXIST;
 }
 
-gxy_result_t Index::Open()
+int Index::Open()
 {
     int ret = SUCCESS;
     if (access(mFileName.c_str(),F_OK) < 0) {
@@ -94,7 +95,7 @@ gxy_result_t Index::Open()
         ret = OPEN_FILE_FAILED;
     } else {
         fseek(mFile,0,SEEK_END);
-        gxy_int64_t len = ftell(mFile);
+        long long len = ftell(mFile);
         if(0 == len) {
             FlushBitset();
         } else if (INDEX_COUNT / 8 <= len) {
@@ -110,17 +111,18 @@ gxy_result_t Index::Open()
     return ret;
 }
 
-gxy_result_t Index::FlushBitset() {
+int Index::FlushBitset() {
     fseek(mFile,0,SEEK_SET);
     int len = fwrite(mBitset.GetChar(0),sizeof(char),INDEX_COUNT / 8,mFile);
     if (len == INDEX_COUNT / 8) {
+        fflush(mFile);
         return SUCCESS;
     } else {
         return WRITE_INDEX_FILE_FAILED;
     }
 }
 
-gxy_result_t Index::ReloadBitset() {
+int Index::ReloadBitset() {
     fseek(mFile,0,SEEK_SET);
     int len = fread(mBitset.GetChar(0),sizeof(char),INDEX_COUNT / 8,mFile);
     if (len == INDEX_COUNT / 8) {
@@ -131,7 +133,7 @@ gxy_result_t Index::ReloadBitset() {
 
 }
 
-gxy_result_t Index::ReloadIndex() {
+int Index::ReloadIndex() {
     int ret = SUCCESS;
     for (int i = 0;i < mBitset.GetSize();i++) {
         if (mBitset.Test(i)) {
@@ -148,34 +150,34 @@ gxy_result_t Index::ReloadIndex() {
     return ret;
 }
 
-gxy_result_t Index::Close()
+int Index::Close()
 {
     return fclose(mFile);
 }
 
-gxy_result_t Index::Flush(Node* n)
+int Index::Flush(Node* n)
 {
     int ret = SUCCESS;
-    gxy_uint32_t index = n->mIndex;
+    unsigned int index = n->mIndex;
     int offset = INDEX_COUNT / 8 + index * 52;
     fseek(mFile,offset,SEEK_SET);
-    int len = fwrite(&n->mOffset,sizeof(gxy_uint64_t),1,mFile);
+    int len = fwrite(&n->mOffset,sizeof(unsigned long long),1,mFile);
     if (len != 1) {
         return WRITE_INDEX_FILE_FAILED;
     }
 
-    len = fwrite(&n->mValueSize,sizeof(gxy_uint32_t),1,mFile);
+    len = fwrite(&n->mValueSize,sizeof(unsigned int),1,mFile);
     if (len != 1) {
         return WRITE_INDEX_FILE_FAILED;
     }
 
-    len = fwrite(&n->mIndex,sizeof(gxy_uint32_t),1,mFile);
+    len = fwrite(&n->mIndex,sizeof(unsigned int),1,mFile);
     if (len != 1) {
         return WRITE_INDEX_FILE_FAILED;
     }
 
-    gxy_uint32_t length = n->mKey.length();
-    len = fwrite(&length,sizeof(gxy_uint32_t),1,mFile);
+    unsigned int length = n->mKey.length();
+    len = fwrite(&length,sizeof(unsigned int),1,mFile);
     if (len != 1) {
         return WRITE_INDEX_FILE_FAILED;
     }
@@ -191,34 +193,35 @@ gxy_result_t Index::Flush(Node* n)
     if (len != 1) {
         return WRITE_INDEX_FILE_FAILED;
     }
+    fflush(mFile);
 
     mBitset.Reset(index);
     return ret;
 }
 
-gxy_result_t Index::Decode(Node* n)
+int Index::Decode(Node* n)
 {
     int ret = SUCCESS;
-    gxy_uint32_t index = n->mIndex;
+    unsigned int index = n->mIndex;
     int offset = INDEX_COUNT / 8 + index * 52;
     fseek(mFile,offset,SEEK_SET);
-    int len = fread(&n->mOffset,sizeof(gxy_uint64_t),1,mFile);
+    int len = fread(&n->mOffset,sizeof(unsigned long long),1,mFile);
     if (len != 1) {
         return READ_INDEX_FILE_FAILED;
     }
 
-    len = fread(&n->mValueSize,sizeof(gxy_uint32_t),1,mFile);
+    len = fread(&n->mValueSize,sizeof(unsigned int),1,mFile);
     if (len != 1) {
         return READ_INDEX_FILE_FAILED;
     }
 
-    len = fread(&n->mIndex,sizeof(gxy_uint32_t),1,mFile);
+    len = fread(&n->mIndex,sizeof(unsigned int),1,mFile);
     if (len != 1) {
         return READ_INDEX_FILE_FAILED;
     }
 
-    gxy_uint32_t length = 0;
-    len = fread(&length,sizeof(gxy_uint32_t),1,mFile);
+    unsigned int length = 0;
+    len = fread(&length,sizeof(unsigned int),1,mFile);
     if (len != 1) {
         return READ_INDEX_FILE_FAILED;
     }
@@ -234,13 +237,13 @@ gxy_result_t Index::Decode(Node* n)
 }
         
 void Index::List(vector<string>& keys,
-        vector<gxy_uint64_t>& offsets,vector<gxy_uint32_t>& lens)
+        vector<unsigned long long>& offsets,vector<unsigned int>& lens)
 {
     List(mHeader,keys,offsets,lens);
 }
 
 void Index::List(Node* p,vector<string>& keys,
-        vector<gxy_uint64_t>& offsets,vector<gxy_uint32_t>& lens)
+        vector<unsigned long long>& offsets,vector<unsigned int>& lens)
 {
     if (p == NULL) {
         return;

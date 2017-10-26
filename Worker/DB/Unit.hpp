@@ -13,17 +13,17 @@ class Unit {
             mOffset = 0;
         }
         ~Unit(){}
-        gxy_result_t Open();
-        gxy_result_t Close();
-        gxy_result_t Write(unsigned char* buf,gxy_uint32_t len);
-        gxy_result_t Read(gxy_uint64_t offset,unsigned char* buf,gxy_uint32_t len);
-        gxy_uint64_t GetOffset() {
+        int Open();
+        int Close();
+        int Write(unsigned char* buf,unsigned int len);
+        int Read(unsigned long long offset,unsigned char* buf,unsigned int len);
+        unsigned long long GetOffset() {
             return mOffset;
         }
     private :
         string mFileName;
         FILE* mFile;
-        gxy_uint64_t mOffset;
+        unsigned long long mOffset;
 };
 
 #endif

@@ -7,13 +7,11 @@ enum OpType {
     eGet,
     eDelete,
 };
+
 struct Request {
-    int mFD;
     int mOpType;
     std::string mKey;
     std::string mValue;
-    int mErrCode;
-    std::string mErrStr;     
 };
 
 #endif

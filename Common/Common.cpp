@@ -1,5 +1,6 @@
 #include "Common.hpp"
 #include "Connection.hpp"
+#include "OpCtx.hpp"
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -37,6 +38,7 @@ int SocketCreate(int port)
 	if (bind(st, (struct sockaddr *) &sockaddr, sizeof(sockaddr)) == -1)
 	{
         std::cout<< "bind error : " << strerror(errno);
+        std::cout<< "port : " << port;
 		return 0;
 	}
 
@@ -63,7 +65,6 @@ Connection* SocketAccept(int st)
     if (ret == -1) {
 	    std::cout << "select failture : " << strerror(errno);
     } else if (ret == 0) {
-	    std::cout << "time out" << std::endl;
     } else if (FD_ISSET(st,&fds)) {
 	    client_st = accept(st, (struct sockaddr *) &client_sockaddr, &len);
 	    if (client_st == -1)
@@ -76,23 +77,28 @@ Connection* SocketAccept(int st)
     return conn;
 }
 
-int ReadRequest(int st,Request*& req)
+int ReadRequest(int st,Request* req)
 {
     char buf[1024];
+    int count = 0;
     int ret = recv(st,buf,1024,MSG_DONTWAIT);
+    count++;
+    while (ret < 0 && count < TRY_COUNT) {
+        ret = recv(st,buf,1024,MSG_DONTWAIT);
+        count++;
+        usleep(1000);
+    }
     if (ret > 0) {
-        for (int i = 0;i < ret;i++) {
-            printf("%d\n",buf[i]);
-        }
         ParseToRequest(buf,req);
     }
+
     return ret;
 }
 
-void ParseToRequest(char* buf,Request*& req)
+void ParseToRequest(char* buf,Request* req)
 {
-    req = new Request;
     int* op = (int*) buf;
+    req->mOpType = *op;
     buf += 4;
     int* keysize = (int*)buf;
     buf += 4;
@@ -113,4 +119,12 @@ void ParseToRequest(char* buf,Request*& req)
         default :
             break;
     }
+}
+int SendResponse(int st,OpCtx* ctx)
+{
+    if (ctx->GetReq()->mOpType == eGet) {
+        ctx->SetResult(0,ctx->GetReq()->mValue);
+    }
+    int ret = send(st,ctx->GetErrStr().c_str(),ctx->GetErrStr().length(),0);
+    return ret;
 }
