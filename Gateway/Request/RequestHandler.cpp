@@ -10,7 +10,7 @@ void* RequestHandler::Entry()
 {
     while (1) {
         if (mQueue.Empty()) {
-            usleep(1000);
+            usleep(SLEEP_TIME);
         } else {
             OpCtx* ctx = NULL;
             mQueue.Dequeue(ctx);

@@ -12,6 +12,9 @@ struct Request {
     int mOpType;
     std::string mKey;
     std::string mValue;
+    std::string mIP;
+    int mPort;
+    std::string mPath;
 };
 
 #endif

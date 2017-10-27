@@ -9,7 +9,7 @@ class Command(object):
         self.port = port
 
     def write(self):
-        for i in range(100000) :
+        for i in range(10000) :
             key = "key" + str(i)
             value = "value" + str(i)
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -20,7 +20,7 @@ class Command(object):
             result = s.recv(1024);
             print result
     def read(self):
-        for i in range(100000) :
+        for i in range(10000) :
             key = "key" + str(i)
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             s.connect((self.ip,int(self.port)));

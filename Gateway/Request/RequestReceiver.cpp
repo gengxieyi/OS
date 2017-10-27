@@ -16,7 +16,7 @@ void* RequestReceiver::Entry() {
             OpCtx* ctx = new OpCtx(conn);
             PostConn(ctx);
         }
-        usleep(1000);
+        usleep(SLEEP_TIME);
     }
 }
 

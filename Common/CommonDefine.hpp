@@ -7,5 +7,6 @@
 #define REQUEST_HANDLER_NUM 1
 #define RESPONSER_NUM 1
 #define TRY_COUNT 1000
+#define SLEEP_TIME 10
 
 #endif
