@@ -100,26 +100,83 @@ void ParseToRequest(char* buf,Request* req)
     int* op = (int*) buf;
     req->mOpType = *op;
     buf += 4;
-    int* keysize = (int*)buf;
-    buf += 4;
-    req->mKey = std::string(buf,*keysize);
-    buf += *keysize;
-    int* valuesize= NULL;
     switch (*op) {
         case ePut :
-            valuesize = (int*) buf;
-            buf += 4;
-            req->mValue = std::string(buf,*valuesize);
-            buf += *valuesize;
+            ReadPutRequest(buf,req);
             break;
         case eGet :
+            ReadGetRequest(buf,req);
             break;
         case eDelete :
+            ReadDeleteRequest(buf,req);
+            break;
+        case eAddServer :
+            ReadAddServerRequest(buf,req);
+            break;
+        case eQueryServer :
+            ReadQueryServerRequest(buf,req);
+            break;
+        case eAddReplica :
+            ReadAddReplicaRequest(buf,req);
             break;
         default :
             break;
     }
 }
+
+void ReadPutRequest(char* buf,Request* req)
+{
+    int* keysize = (int*)buf;
+    buf += 4;
+    req->mKey = std::string(buf,*keysize);
+    buf += *keysize;
+    int* valuesize =  (int*) buf;
+    buf += 4;
+    req->mValue = std::string(buf,*valuesize);
+    buf += *valuesize;
+}
+
+void ReadGetRequest(char* buf,Request* req)
+{
+    int* keysize = (int*)buf;
+    buf += 4;
+    req->mKey = std::string(buf,*keysize);
+    buf += *keysize;
+}
+
+void ReadDeleteRequest(char* buf,Request* req)
+{
+    int* keysize = (int*)buf;
+    buf += 4;
+    req->mKey = std::string(buf,*keysize);
+    buf += *keysize;
+}
+
+void ReadAddServerRequest(char* buf,Request* req)
+{
+    int* ipsize = (int*)buf;
+    buf += 4;
+    req->mIP = std::string(buf,*ipsize);
+    buf += *ipsize;
+}
+
+void ReadAddReplicaRequest(char* buf,Request* req)
+{
+    int* ipsize = (int*)buf;
+    buf += 4;
+    req->mIP = std::string(buf,*ipsize);
+    buf += *ipsize;
+    int* pathsize = (int*)buf;
+    buf += 4;
+    req->mIP = std::string(buf,*pathsize);
+    buf += *pathsize;
+}
+
+void ReadQueryServerRequest(char* buf,Request* req)
+{
+}
+
+
 int SendResponse(int st,OpCtx* ctx)
 {
     if (ctx->GetReq()->mOpType == eGet) {

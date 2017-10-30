@@ -6,6 +6,11 @@ enum OpType {
     ePut = 1,
     eGet,
     eDelete,
+
+    eAddServer = 10,
+    eQueryServer,
+    eStartService,
+    eAddReplica,
 };
 
 struct Request {
@@ -13,8 +18,8 @@ struct Request {
     std::string mKey;
     std::string mValue;
     std::string mIP;
-    int mPort;
     std::string mPath;
+    int mPartitionNum;
 };
 
 #endif
