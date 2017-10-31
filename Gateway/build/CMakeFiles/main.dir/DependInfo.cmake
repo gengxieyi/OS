@@ -5,6 +5,10 @@ SET(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
   "/root/OS/Gateway/Main/Main.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Main/Main.cpp.o"
+  "/root/OS/Gateway/Manage/ConnectionWorker.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Manage/ConnectionWorker.cpp.o"
+  "/root/OS/Gateway/Manage/MsgManager.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Manage/MsgManager.cpp.o"
+  "/root/OS/Gateway/Manage/MsgWorker.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Manage/MsgWorker.cpp.o"
+  "/root/OS/Gateway/Manage/RWHandler.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Manage/RWHandler.cpp.o"
   "/root/OS/Gateway/Request/RequestHandler.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Request/RequestHandler.cpp.o"
   "/root/OS/Gateway/Request/RequestManager.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Request/RequestManager.cpp.o"
   "/root/OS/Gateway/Request/RequestReceiver.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/Request/RequestReceiver.cpp.o"
@@ -16,9 +20,6 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/root/OS/Common/OpCtx.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Common/OpCtx.cpp.o"
   "/root/OS/Common/Server.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Common/Server.cpp.o"
   "/root/OS/Common/Worker.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Common/Worker.cpp.o"
-  "/root/OS/Worker/DB/Index.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Worker/DB/Index.cpp.o"
-  "/root/OS/Worker/DB/KVDatabase.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Worker/DB/KVDatabase.cpp.o"
-  "/root/OS/Worker/DB/Unit.cpp" "/root/OS/Gateway/build/CMakeFiles/main.dir/root/OS/Worker/DB/Unit.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 

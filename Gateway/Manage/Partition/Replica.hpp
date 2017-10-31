@@ -1,9 +1,11 @@
 #ifndef REPLICA_HPP_
 #define REPLICA_HPP_
 
+#include <string>
+
 class Replica {
     public :
-        Replica(int id,str::string ip,string path) {
+        Replica(int id,std::string ip,std::string path) {
             mID = id;
             mIP = ip;
             mPath = path;

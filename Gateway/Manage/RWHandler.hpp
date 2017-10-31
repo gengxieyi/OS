@@ -1,7 +1,12 @@
 #ifndef RWHANDLER_HPP_
 #define RWHANDLER_HPP_
 
+#include <map>
 #include "../../Common/Worker.hpp"
+
+class OServer;
+class Partition;
+class Replica;
 
 class RWHandler : public Worker {
     public :
@@ -14,12 +19,16 @@ class RWHandler : public Worker {
     private :
         void* Entry();
         void ProcessRequest(OpCtx*);
-        map<int,OServer*> mServers;
-        map<int,Partiotion*> mPartiotions;
-        map<int,Replica*> mReplicas;
+        void AddServer(OpCtx* op);
+        void QueryServer(OpCtx* op);
+        void StartService(OpCtx* op);
+        void AddReplica(OpCtx* op);
+        std::map<int,OServer*> mServers;
+        std::map<int,Partition*> mPartiotions;
+        std::map<int,Replica*> mReplicas;
         int mNextServerId;
         int mNextPartitionId;
         int mNextReplicaId;
-}
+};
 
 #endif

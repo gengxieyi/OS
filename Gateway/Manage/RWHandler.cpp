@@ -1,7 +1,15 @@
 #include "RWHandler.hpp"
 #include <sstream>
+#include <unistd.h>
+#include "../../Common/CommonDefine.hpp"
+#include "../../Common/OpCtx.hpp"
+#include "../../Common/Request.hpp"
+#include "../Main/WorkerManager.hpp"
+#include "Partition/OServer.hpp"
+#include "Partition/Partition.hpp"
+#include "Partition/Replica.hpp"
 
-void* Entry()
+void* RWHandler::Entry()
 {
     while (1) {
         if (mQueue.Empty()) {
@@ -30,7 +38,7 @@ void RWHandler::ProcessRequest (OpCtx* op)
             StartService(op);
             break;
         case eAddReplica :
-            AddRplica(op);
+            AddReplica(op);
             break;
         default :
             op->SetResult(0,"unknown op code");
@@ -40,7 +48,7 @@ void RWHandler::ProcessRequest (OpCtx* op)
 
 void RWHandler::AddServer(OpCtx* op)
 {
-    map<int,OServer*>::iterator iter;
+    std::map<int,OServer*>::iterator iter;
     for (iter = mServers.begin();iter != mServers.end();iter++) {
         if (iter->second->GetIP() == op->GetReq()->mIP) {
             op->SetResult(0,"Server exist");
@@ -57,10 +65,10 @@ void RWHandler::QueryServer(OpCtx* op)
 {
     std::stringstream ss;
     ss << mServers.size();
-    map<int,OServer*>::iterator iter;
+    std::map<int,OServer*>::iterator iter;
     for (iter = mServers.begin();iter != mServers.end();iter++) {
         ss << iter->second->GetIP();
-        ss << iter->second->GetStatus() == SS_online ? "online":"offline";
+        ss << (iter->second->GetStatus() == SS_online ? "online":"offline");
     }
     op->SetResult(0,ss.str());
 }
@@ -70,10 +78,16 @@ void RWHandler::StartService(OpCtx* op)
 }
 void RWHandler::AddReplica(OpCtx* op)
 {
-    map<int,OServer*>::iterator iter =  mServers.find(op->GetReq()->mIP);
-    map<int,Replica*>::iterator replica_iter;
+    std::map<int,OServer*>::iterator iter ;
+    std::map<int,Replica*>::iterator replica_iter;
+    for (iter == mServers.begin();iter != mServers.end();iter++) {
+        if (iter->second->GetIP() == op->GetReq()->mIP) {
+            break;
+        }
+    }
     if (iter == mServers.end()) {
         op->SetResult(0,"IP not exist");
+        return;
     }
 
     for (replica_iter = mReplicas.begin();
@@ -85,7 +99,7 @@ void RWHandler::AddReplica(OpCtx* op)
     }
     Replica* replica = new Replica(++mNextReplicaId,
             op->GetReq()->mIP,op->GetReq()->mPath);
-    mReplicas.insert(std::make_pair(replica->GetID(),replica););
+    mReplicas.insert(std::make_pair(replica->GetID(),replica));
 }
 
 

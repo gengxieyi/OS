@@ -138,6 +138,102 @@ Main/Main.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Main/Main.cpp.s
 .PHONY : Main/Main.cpp.s
 
+Manage/ConnectionWorker.o: Manage/ConnectionWorker.cpp.o
+.PHONY : Manage/ConnectionWorker.o
+
+# target to build an object file
+Manage/ConnectionWorker.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Manage/ConnectionWorker.cpp.o
+.PHONY : Manage/ConnectionWorker.cpp.o
+
+Manage/ConnectionWorker.i: Manage/ConnectionWorker.cpp.i
+.PHONY : Manage/ConnectionWorker.i
+
+# target to preprocess a source file
+Manage/ConnectionWorker.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Manage/ConnectionWorker.cpp.i
+.PHONY : Manage/ConnectionWorker.cpp.i
+
+Manage/ConnectionWorker.s: Manage/ConnectionWorker.cpp.s
+.PHONY : Manage/ConnectionWorker.s
+
+# target to generate assembly for a file
+Manage/ConnectionWorker.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Manage/ConnectionWorker.cpp.s
+.PHONY : Manage/ConnectionWorker.cpp.s
+
+Manage/MsgManager.o: Manage/MsgManager.cpp.o
+.PHONY : Manage/MsgManager.o
+
+# target to build an object file
+Manage/MsgManager.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Manage/MsgManager.cpp.o
+.PHONY : Manage/MsgManager.cpp.o
+
+Manage/MsgManager.i: Manage/MsgManager.cpp.i
+.PHONY : Manage/MsgManager.i
+
+# target to preprocess a source file
+Manage/MsgManager.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Manage/MsgManager.cpp.i
+.PHONY : Manage/MsgManager.cpp.i
+
+Manage/MsgManager.s: Manage/MsgManager.cpp.s
+.PHONY : Manage/MsgManager.s
+
+# target to generate assembly for a file
+Manage/MsgManager.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Manage/MsgManager.cpp.s
+.PHONY : Manage/MsgManager.cpp.s
+
+Manage/MsgWorker.o: Manage/MsgWorker.cpp.o
+.PHONY : Manage/MsgWorker.o
+
+# target to build an object file
+Manage/MsgWorker.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Manage/MsgWorker.cpp.o
+.PHONY : Manage/MsgWorker.cpp.o
+
+Manage/MsgWorker.i: Manage/MsgWorker.cpp.i
+.PHONY : Manage/MsgWorker.i
+
+# target to preprocess a source file
+Manage/MsgWorker.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Manage/MsgWorker.cpp.i
+.PHONY : Manage/MsgWorker.cpp.i
+
+Manage/MsgWorker.s: Manage/MsgWorker.cpp.s
+.PHONY : Manage/MsgWorker.s
+
+# target to generate assembly for a file
+Manage/MsgWorker.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Manage/MsgWorker.cpp.s
+.PHONY : Manage/MsgWorker.cpp.s
+
+Manage/RWHandler.o: Manage/RWHandler.cpp.o
+.PHONY : Manage/RWHandler.o
+
+# target to build an object file
+Manage/RWHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Manage/RWHandler.cpp.o
+.PHONY : Manage/RWHandler.cpp.o
+
+Manage/RWHandler.i: Manage/RWHandler.cpp.i
+.PHONY : Manage/RWHandler.i
+
+# target to preprocess a source file
+Manage/RWHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Manage/RWHandler.cpp.i
+.PHONY : Manage/RWHandler.cpp.i
+
+Manage/RWHandler.s: Manage/RWHandler.cpp.s
+.PHONY : Manage/RWHandler.s
+
+# target to generate assembly for a file
+Manage/RWHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Manage/RWHandler.cpp.s
+.PHONY : Manage/RWHandler.cpp.s
+
 Request/RequestHandler.o: Request/RequestHandler.cpp.o
 .PHONY : Request/RequestHandler.o
 
@@ -402,78 +498,6 @@ root/OS/Common/Worker.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Common/Worker.cpp.s
 .PHONY : root/OS/Common/Worker.cpp.s
 
-root/OS/Worker/DB/Index.o: root/OS/Worker/DB/Index.cpp.o
-.PHONY : root/OS/Worker/DB/Index.o
-
-# target to build an object file
-root/OS/Worker/DB/Index.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Worker/DB/Index.cpp.o
-.PHONY : root/OS/Worker/DB/Index.cpp.o
-
-root/OS/Worker/DB/Index.i: root/OS/Worker/DB/Index.cpp.i
-.PHONY : root/OS/Worker/DB/Index.i
-
-# target to preprocess a source file
-root/OS/Worker/DB/Index.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Worker/DB/Index.cpp.i
-.PHONY : root/OS/Worker/DB/Index.cpp.i
-
-root/OS/Worker/DB/Index.s: root/OS/Worker/DB/Index.cpp.s
-.PHONY : root/OS/Worker/DB/Index.s
-
-# target to generate assembly for a file
-root/OS/Worker/DB/Index.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Worker/DB/Index.cpp.s
-.PHONY : root/OS/Worker/DB/Index.cpp.s
-
-root/OS/Worker/DB/KVDatabase.o: root/OS/Worker/DB/KVDatabase.cpp.o
-.PHONY : root/OS/Worker/DB/KVDatabase.o
-
-# target to build an object file
-root/OS/Worker/DB/KVDatabase.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Worker/DB/KVDatabase.cpp.o
-.PHONY : root/OS/Worker/DB/KVDatabase.cpp.o
-
-root/OS/Worker/DB/KVDatabase.i: root/OS/Worker/DB/KVDatabase.cpp.i
-.PHONY : root/OS/Worker/DB/KVDatabase.i
-
-# target to preprocess a source file
-root/OS/Worker/DB/KVDatabase.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Worker/DB/KVDatabase.cpp.i
-.PHONY : root/OS/Worker/DB/KVDatabase.cpp.i
-
-root/OS/Worker/DB/KVDatabase.s: root/OS/Worker/DB/KVDatabase.cpp.s
-.PHONY : root/OS/Worker/DB/KVDatabase.s
-
-# target to generate assembly for a file
-root/OS/Worker/DB/KVDatabase.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Worker/DB/KVDatabase.cpp.s
-.PHONY : root/OS/Worker/DB/KVDatabase.cpp.s
-
-root/OS/Worker/DB/Unit.o: root/OS/Worker/DB/Unit.cpp.o
-.PHONY : root/OS/Worker/DB/Unit.o
-
-# target to build an object file
-root/OS/Worker/DB/Unit.cpp.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Worker/DB/Unit.cpp.o
-.PHONY : root/OS/Worker/DB/Unit.cpp.o
-
-root/OS/Worker/DB/Unit.i: root/OS/Worker/DB/Unit.cpp.i
-.PHONY : root/OS/Worker/DB/Unit.i
-
-# target to preprocess a source file
-root/OS/Worker/DB/Unit.cpp.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Worker/DB/Unit.cpp.i
-.PHONY : root/OS/Worker/DB/Unit.cpp.i
-
-root/OS/Worker/DB/Unit.s: root/OS/Worker/DB/Unit.cpp.s
-.PHONY : root/OS/Worker/DB/Unit.s
-
-# target to generate assembly for a file
-root/OS/Worker/DB/Unit.cpp.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/root/OS/Worker/DB/Unit.cpp.s
-.PHONY : root/OS/Worker/DB/Unit.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -486,6 +510,18 @@ help:
 	@echo "... Main/Main.o"
 	@echo "... Main/Main.i"
 	@echo "... Main/Main.s"
+	@echo "... Manage/ConnectionWorker.o"
+	@echo "... Manage/ConnectionWorker.i"
+	@echo "... Manage/ConnectionWorker.s"
+	@echo "... Manage/MsgManager.o"
+	@echo "... Manage/MsgManager.i"
+	@echo "... Manage/MsgManager.s"
+	@echo "... Manage/MsgWorker.o"
+	@echo "... Manage/MsgWorker.i"
+	@echo "... Manage/MsgWorker.s"
+	@echo "... Manage/RWHandler.o"
+	@echo "... Manage/RWHandler.i"
+	@echo "... Manage/RWHandler.s"
 	@echo "... Request/RequestHandler.o"
 	@echo "... Request/RequestHandler.i"
 	@echo "... Request/RequestHandler.s"
@@ -519,15 +555,6 @@ help:
 	@echo "... root/OS/Common/Worker.o"
 	@echo "... root/OS/Common/Worker.i"
 	@echo "... root/OS/Common/Worker.s"
-	@echo "... root/OS/Worker/DB/Index.o"
-	@echo "... root/OS/Worker/DB/Index.i"
-	@echo "... root/OS/Worker/DB/Index.s"
-	@echo "... root/OS/Worker/DB/KVDatabase.o"
-	@echo "... root/OS/Worker/DB/KVDatabase.i"
-	@echo "... root/OS/Worker/DB/KVDatabase.s"
-	@echo "... root/OS/Worker/DB/Unit.o"
-	@echo "... root/OS/Worker/DB/Unit.i"
-	@echo "... root/OS/Worker/DB/Unit.s"
 .PHONY : help
 
 

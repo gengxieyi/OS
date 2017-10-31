@@ -7,7 +7,7 @@ enum OpType {
     eGet,
     eDelete,
 
-    eAddServer = 10,
+    eAddServer = 11,
     eQueryServer,
     eStartService,
     eAddReplica,
