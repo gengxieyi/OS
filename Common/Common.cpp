@@ -168,7 +168,7 @@ void ReadAddReplicaRequest(char* buf,Request* req)
     buf += *ipsize;
     int* pathsize = (int*)buf;
     buf += 4;
-    req->mIP = std::string(buf,*pathsize);
+    req->mPath = std::string(buf,*pathsize);
     buf += *pathsize;
 }
 

@@ -58,7 +58,7 @@ void RWHandler::AddServer(OpCtx* op)
 
     OServer* server = new OServer(++mNextServerId,op->GetReq()->mIP);
     mServers.insert(std::make_pair(server->GetID(),server));
-    op->SetResult(0,"Success");
+    op->SetResult(0,"success");
 }
 
 void RWHandler::QueryServer(OpCtx* op)
@@ -66,9 +66,16 @@ void RWHandler::QueryServer(OpCtx* op)
     std::stringstream ss;
     ss << mServers.size();
     std::map<int,OServer*>::iterator iter;
+    std::map<int,Replica*>::iterator replica_iter;
     for (iter = mServers.begin();iter != mServers.end();iter++) {
         ss << iter->second->GetIP();
         ss << (iter->second->GetStatus() == SS_online ? "online":"offline");
+        for (replica_iter = mReplicas.begin();
+                replica_iter != mReplicas.end();replica_iter++) {
+            if (replica_iter->second->GetIP() == iter->second->GetIP()) {
+                ss << replica_iter->second->GetPath();
+            }
+        }
     }
     op->SetResult(0,ss.str());
 }
@@ -80,7 +87,7 @@ void RWHandler::AddReplica(OpCtx* op)
 {
     std::map<int,OServer*>::iterator iter ;
     std::map<int,Replica*>::iterator replica_iter;
-    for (iter == mServers.begin();iter != mServers.end();iter++) {
+    for (iter = mServers.begin();iter != mServers.end();iter++) {
         if (iter->second->GetIP() == op->GetReq()->mIP) {
             break;
         }
@@ -100,6 +107,7 @@ void RWHandler::AddReplica(OpCtx* op)
     Replica* replica = new Replica(++mNextReplicaId,
             op->GetReq()->mIP,op->GetReq()->mPath);
     mReplicas.insert(std::make_pair(replica->GetID(),replica));
+    op->SetResult(0,"success");
 }
 
 

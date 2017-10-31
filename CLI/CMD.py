@@ -30,7 +30,7 @@ class Command(object):
             result = s.recv(1024);
             if result == "value" + str(i) :
                 print "success"
-    def add(self):
+    def addserver(self):
         for i in range(1) :
             ip = "192.168.36.114"
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -49,6 +49,17 @@ class Command(object):
             s.send(data);
             result = s.recv(1024);
             print result
+    def addreplica(self):
+        for i in range(1) :
+            ip = "192.168.36.114"
+            path = "/home/sdc"
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s.connect((self.ip,int(self.port)));
+            pattern = "<ii"+str(len(ip))+"si"+str(len(path))+"s"
+            data = struct.pack(pattern,14,len(ip),ip,len(path),path);
+            s.send(data);
+            result = s.recv(1024);
+            print result
 
 if __name__ == "__main__":
     if len(sys.argv) < 4:
@@ -64,8 +75,11 @@ if __name__ == "__main__":
             command.write()
         elif op == "get" :
             command.read()
-        elif op == "add" :
-            command.add()
+        elif op == "addserver" :
+            command.addserver()
         elif op == "query" :
-            command.query()
+            command.query() 
+        elif op == "addreplica" :
+            command.addreplica()
+
         print datetime.datetime.now()
